@@ -58,12 +58,12 @@ do {
     Show-Header
     Write-Host 'Select a SIPPICOM Cloud Tool:' -ForegroundColor Cyan
     Write-Host ''
-    Write-Host '  [1] > CertRDP          - RDP Code Signing & PKI Trust Suite' -ForegroundColor White
-    Write-Host '  [2] > PrinterFix       - Multi-Threaded Print Spooler & IP Hub' -ForegroundColor White
-    Write-Host '  [3] > AutoDeploy       - Workstation Software & Setup Deployer' -ForegroundColor White
-    Write-Host '  [4] > AutoDeploy Fast  - Unattended Silent Workstation Deployer' -ForegroundColor White
-    Write-Host '  [5] > CtrlAltPass      - Enterprise Password Generator' -ForegroundColor White
-    Write-Host '  [6] > Download All     - Save standalone binaries locally' -ForegroundColor White
+    Write-Host '  [1] > RootOfTrust    - RDP Code Signing & PKI Trust Suite' -ForegroundColor White
+    Write-Host '  [2] > PaperJamZero   - Multi-Threaded Spooler & Network Hub' -ForegroundColor White
+    Write-Host '  [3] > TurnKeyPC      - Workstation Setup & Software Deployer' -ForegroundColor White
+    Write-Host '  [4] > TurnKeyFast    - Unattended Silent Workstation Deployer' -ForegroundColor White
+    Write-Host '  [5] > CtrlAltPass    - Enterprise Password Generator' -ForegroundColor White
+    Write-Host '  [6] > Download All   - Save standalone binaries locally' -ForegroundColor White
     Write-Host '  [Q] > Exit' -ForegroundColor Red
     Write-Host ''
     Write-Host 'Enter selection [1-6, Q]: ' -NoNewline -ForegroundColor Yellow
