@@ -63,10 +63,11 @@ do {
     Write-Host '  [3] > TurnKeyPC      - Workstation Setup & Software Deployer' -ForegroundColor White
     Write-Host '  [4] > TurnKeyFast    - Unattended Silent Workstation Deployer' -ForegroundColor White
     Write-Host '  [5] > CtrlAltPass    - Enterprise Password Generator' -ForegroundColor White
-    Write-Host '  [6] > Download All   - Save standalone binaries locally' -ForegroundColor White
+    Write-Host '  [6] > PingMeMaybe    - Network Diagnostics, Port Scanner & SSL' -ForegroundColor White
+    Write-Host '  [7] > Download All   - Save standalone binaries locally' -ForegroundColor White
     Write-Host '  [Q] > Exit' -ForegroundColor Red
     Write-Host ''
-    Write-Host 'Enter selection [1-6, Q]: ' -NoNewline -ForegroundColor Yellow
+    Write-Host 'Enter selection [1-7, Q]: ' -NoNewline -ForegroundColor Yellow
 
     $choice = Read-Host
 
@@ -76,10 +77,11 @@ do {
         '3' { Launch-Tool 'TurnKeyPC' 'TurnKeyPC.exe'; Start-Sleep -Seconds 1 }
         '4' { Launch-Tool 'TurnKeyFast' 'TurnKeyFast.exe'; Start-Sleep -Seconds 1 }
         '5' { Launch-Tool 'CtrlAltPass' 'CtrlAltPass.exe'; Start-Sleep -Seconds 1 }
-        '6' {
+        '6' { Launch-Tool 'PingMeMaybe' 'PingMeMaybe.exe'; Start-Sleep -Seconds 1 }
+        '7' {
             Write-Host ''
             Write-Host '--> Downloading standalone binaries to current directory...' -ForegroundColor Cyan
-            $bins = @('RootOfTrust.exe', 'PaperJamZero.exe', 'TurnKeyPC.exe', 'TurnKeyFast.exe', 'CtrlAltPass.exe')
+            $bins = @('RootOfTrust.exe', 'PaperJamZero.exe', 'TurnKeyPC.exe', 'TurnKeyFast.exe', 'CtrlAltPass.exe', 'PingMeMaybe.exe')
             $wc = New-Object System.Net.WebClient
             foreach ($b in $bins) {
                 Write-Host ('    Downloading ' + $b + ' ... ') -NoNewline
