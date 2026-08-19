@@ -1,0 +1,48 @@
+name: SIPPICOM Tools CI & Verification
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  verify:
+    name: Verify Scripts & Binaries
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Validate PowerShell Script Syntax
+      shell: pwsh
+      run: |
+        $scripts = Get-ChildItem -Path . -Filter "*.ps1" -Recurse
+        $hasError = $false
+        foreach ($s in $scripts) {
+          try {
+            $content = Get-Content $s.FullName -Raw
+            [void][ScriptBlock]::Create($content)
+            Write-Host "✓ Valid: $($s.Name)" -ForegroundColor Green
+          } catch {
+            Write-Host "✗ Error in $($s.Name): $($_.Exception.Message)" -ForegroundColor Red
+            $hasError = $true
+          }
+        }
+        if ($hasError) { exit 1 }
+
+    - name: Verify Standalone Binaries Present
+      shell: pwsh
+      run: |
+        $expected = @("CertRDP.exe", "SippicomPrinterFix.exe", "SippicomAutoDeploy.exe", "SippicomAutoDeployFast.exe", "SippicomCtrlAltPass.exe")
+        foreach ($bin in $expected) {
+          $path = "bin/$bin"
+          if (Test-Path $path) {
+            $size = (Get-Item $path).Length / 1KB
+            Write-Host "✓ Binary Present: $bin ({0:N0} KB)" -f $size -ForegroundColor Green
+          } else {
+            Write-Host "✗ Missing Binary: $bin" -ForegroundColor Red
+            exit 1
+          }
+        }
