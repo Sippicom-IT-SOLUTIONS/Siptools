@@ -71,15 +71,15 @@ do {
     $choice = Read-Host
 
     switch ($choice) {
-        '1' { Launch-Tool 'CertRDP' 'CertRDP.exe'; Start-Sleep -Seconds 1 }
-        '2' { Launch-Tool 'PrinterFix' 'SippicomPrinterFix.exe'; Start-Sleep -Seconds 1 }
-        '3' { Launch-Tool 'AutoDeploy' 'SippicomAutoDeploy.exe'; Start-Sleep -Seconds 1 }
-        '4' { Launch-Tool 'AutoDeploy Fast' 'SippicomAutoDeployFast.exe'; Start-Sleep -Seconds 1 }
-        '5' { Launch-Tool 'CtrlAltPass' 'SippicomCtrlAltPass.exe'; Start-Sleep -Seconds 1 }
+        '1' { Launch-Tool 'RootOfTrust' 'RootOfTrust.exe'; Start-Sleep -Seconds 1 }
+        '2' { Launch-Tool 'PaperJamZero' 'PaperJamZero.exe'; Start-Sleep -Seconds 1 }
+        '3' { Launch-Tool 'TurnKeyPC' 'TurnKeyPC.exe'; Start-Sleep -Seconds 1 }
+        '4' { Launch-Tool 'TurnKeyFast' 'TurnKeyFast.exe'; Start-Sleep -Seconds 1 }
+        '5' { Launch-Tool 'CtrlAltPass' 'CtrlAltPass.exe'; Start-Sleep -Seconds 1 }
         '6' {
             Write-Host ''
             Write-Host '--> Downloading standalone binaries to current directory...' -ForegroundColor Cyan
-            $bins = @('CertRDP.exe', 'SippicomPrinterFix.exe', 'SippicomAutoDeploy.exe', 'SippicomAutoDeployFast.exe', 'SippicomCtrlAltPass.exe')
+            $bins = @('RootOfTrust.exe', 'PaperJamZero.exe', 'TurnKeyPC.exe', 'TurnKeyFast.exe', 'CtrlAltPass.exe')
             $wc = New-Object System.Net.WebClient
             foreach ($b in $bins) {
                 Write-Host ('    Downloading ' + $b + ' ... ') -NoNewline

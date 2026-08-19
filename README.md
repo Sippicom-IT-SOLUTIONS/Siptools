@@ -43,12 +43,12 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/main.ps1 
 
 Select a SIPPICOM Cloud Tool:
 
-  [1] > CertRDP          - RDP Code Signing & PKI Trust Suite
-  [2] > PrinterFix       - Multi-Threaded Print Spooler & IP Hub
-  [3] > AutoDeploy       - Workstation Software & Setup Deployer
-  [4] > AutoDeploy Fast  - Unattended Silent Workstation Deployer
-  [5] > CtrlAltPass      - Enterprise Password Generator
-  [6] > Download All     - Save standalone binaries locally
+  [1] > RootOfTrust    - RDP Code Signing & PKI Trust Suite
+  [2] > PaperJamZero   - Multi-Threaded Spooler & Network Hub
+  [3] > TurnKeyPC      - Workstation Setup & Software Deployer
+  [4] > TurnKeyFast    - Unattended Silent Workstation Deployer
+  [5] > CtrlAltPass    - Enterprise Password Generator
+  [6] > Download All   - Save standalone binaries locally
   [Q] > Exit
 ```
 
@@ -58,30 +58,32 @@ Select a SIPPICOM Cloud Tool:
 
 | Tool | Focus Area | One-Liner Execution Command |
 | :--- | :--- | :--- |
-| **🔐 CertRDP** | RDP Security & Code Signing | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/certrdp/CertRDP.ps1 \| iex` |
-| **🖨️ PrinterFix** | Spooler & Network Queue Engine | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/printerfix/PrinterFix.ps1 \| iex` |
-| **🚀 AutoDeploy** | Workstation Setup (Interactive) | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/autodeploy/AutoDeploy.ps1 \| iex` |
-| **⚡ AutoDeploy Fast** | Workstation Setup (Unattended) | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/autodeploy/AutoDeployFast.ps1 \| iex` |
-| **🔑 CtrlAltPass** | Enterprise Credential Security | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/ctrlaltpass/CtrlAltPass.ps1 \| iex` |
+| **🔐 RootOfTrust** | RDP Security & Code Signing | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/RootOfTrust/RootOfTrust.ps1 \| iex` |
+| **🖨️ PaperJamZero** | Spooler & Network Queue Engine | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/PaperJamZero/PaperJamZero.ps1 \| iex` |
+| **🚀 TurnKeyPC** | Workstation Setup (Interactive) | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/TurnKeyPC/TurnKeyPC.ps1 \| iex` |
+| **⚡ TurnKeyFast** | Workstation Setup (Unattended) | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/TurnKeyFast/TurnKeyFast.ps1 \| iex` |
+| **🔑 CtrlAltPass** | Enterprise Credential Security | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/CtrlAltPass/CtrlAltPass.ps1 \| iex` |
 
 ---
 
 ## 📖 Tool Capabilities & Documentation
 
-### 1. 🔐 CertRDP (`CertRDP.exe` / `CertRDP.ps1`)
-**RDP Security, Certificate Generation & Code Signing Suite**
+### 1. 🔐 RootOfTrust (`RootOfTrust.exe` / `RootOfTrust.ps1`)
+*(Formerly `CertRDP`)*
+**RDP Security, Certificate Authority & Code Signing Suite**
 - Generates 2048-bit RSA / SHA-256 self-signed code signing certificates.
 - Installs public certificates directly into local machine `Root` (Trusted Root Certification Authorities) and `TrustedPublisher` stores.
 - Configures Terminal Services warning suppression policies (`AuthenticationLevelOverride`, `PromptForCredentials`).
 - Signs `.rdp` connection files via native `rdpsign.exe` using certificate SHA-256 thumbprints.
 
 ```powershell
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/certrdp/CertRDP.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/RootOfTrust/RootOfTrust.ps1 | iex
 ```
 
 ---
 
-### 2. 🖨️ PrinterFix (`SippicomPrinterFix.exe` / `PrinterFix.ps1`)
+### 2. 🖨️ PaperJamZero (`PaperJamZero.exe` / `PaperJamZero.ps1`)
+*(Formerly `PrinterFix`)*
 **Multi-Threaded Spooler Manager & Network Print Hub**
 - Restarts and diagnoses the Windows Print Spooler (`spoolsv.exe`).
 - Purges stuck `.SPL` and `.SHD` print spool files from `System32\spool\PRINTERS`.
@@ -90,39 +92,40 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/cer
 - Performs full native printer backup and restoration migrations (`PrintBrm.exe` `.printerExport` format).
 
 ```powershell
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/printerfix/PrinterFix.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/PaperJamZero/PaperJamZero.ps1 | iex
 ```
 
 ---
 
-### 3. 🚀 AutoDeploy & AutoDeploy Fast (`SippicomAutoDeploy.exe` / `AutoDeploy.ps1`)
+### 3. 🚀 TurnKeyPC & TurnKeyFast (`TurnKeyPC.exe`, `TurnKeyFast.exe` / `TurnKeyPC.ps1`)
+*(Formerly `AutoDeploy` & `AutoDeployFast`)*
 **Parallel Multi-Threaded Workstation Deployment Engine**
 - Concurrently installs essential business software across background worker threads:
   - **Microsoft 365 Apps** (German locale, Business configuration via Office Deployment Tool).
   - **Adobe Acrobat Reader 64-bit** (with automatic scheduled update tasks).
   - **VLC Media Player x64**.
   - **7-Zip x64**.
-- **Interactive Mode**: Provides a real-time GUI with progress bars and status logs.
-- **Fast Mode (`AutoDeployFast`)**: Silent unattended workstation provisioning with zero prompts.
+- **Interactive Mode (`TurnKeyPC`)**: Provides a real-time GUI with progress bars and status logs.
+- **Fast Mode (`TurnKeyFast`)**: Silent unattended workstation provisioning with zero prompts.
 
 ```powershell
 # Interactive Deployment:
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/autodeploy/AutoDeploy.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/TurnKeyPC/TurnKeyPC.ps1 | iex
 
 # Silent Unattended Deployment:
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/autodeploy/AutoDeployFast.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/TurnKeyFast/TurnKeyFast.ps1 | iex
 ```
 
 ---
 
-### 4. 🔑 CtrlAltPass (`SippicomCtrlAltPass.exe` / `CtrlAltPass.ps1`)
+### 4. 🔑 CtrlAltPass (`CtrlAltPass.exe` / `CtrlAltPass.ps1`)
 **Enterprise Cryptographic Password & PIN Generator**
 - Generates high-entropy 16-, 20-, and 24-character passwords using cryptographically secure random number generators (`RNGCryptoServiceProvider`).
 - Generates 6-digit numeric PINs for MFA and service accounts.
 - Features automatic clipboard copy and clean, distraction-free corporate GUI.
 
 ```powershell
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/ctrlaltpass/CtrlAltPass.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/CtrlAltPass/CtrlAltPass.ps1 | iex
 ```
 
 ---
@@ -137,21 +140,22 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/ctr
 │   └── workflows/
 │       └── verify-and-release.yml <-- GitHub Actions CI/CD Verification
 ├── tools/
-│   ├── certrdp/
-│   │   └── CertRDP.ps1        <-- Cloud RDP Signer
-│   ├── printerfix/
-│   │   └── PrinterFix.ps1     <-- Cloud PrinterFix Engine
-│   ├── autodeploy/
-│   │   ├── AutoDeploy.ps1     <-- Interactive Workstation Deployer
-│   │   └── AutoDeployFast.ps1 <-- Unattended Silent Deployer
-│   └── ctrlaltpass/
+│   ├── RootOfTrust/
+│   │   └── RootOfTrust.ps1    <-- Cloud RDP Signer (formerly CertRDP)
+│   ├── PaperJamZero/
+│   │   └── PaperJamZero.ps1   <-- Cloud PrinterFix Engine (formerly PrinterFix)
+│   ├── TurnKeyPC/
+│   │   └── TurnKeyPC.ps1      <-- Interactive Workstation Deployer (formerly AutoDeploy)
+│   ├── TurnKeyFast/
+│   │   └── TurnKeyFast.ps1    <-- Unattended Silent Deployer (formerly AutoDeployFast)
+│   └── CtrlAltPass/
 │       └── CtrlAltPass.ps1    <-- Cloud Credential Generator
 └── bin/                       <-- Compiled 64-bit Standalone Executables
-    ├── CertRDP.exe
-    ├── SippicomPrinterFix.exe
-    ├── SippicomAutoDeploy.exe
-    ├── SippicomAutoDeployFast.exe
-    └── SippicomCtrlAltPass.exe
+    ├── RootOfTrust.exe
+    ├── PaperJamZero.exe
+    ├── TurnKeyPC.exe
+    ├── TurnKeyFast.exe
+    └── CtrlAltPass.exe
 ```
 
 ---

@@ -38,7 +38,7 @@ jobs:
     - name: Verify Standalone Binaries Present
       shell: pwsh
       run: |
-        $expected = @("CertRDP.exe", "SippicomPrinterFix.exe", "SippicomAutoDeploy.exe", "SippicomAutoDeployFast.exe", "SippicomCtrlAltPass.exe")
+        $expected = @("RootOfTrust.exe", "PaperJamZero.exe", "TurnKeyPC.exe", "TurnKeyFast.exe", "CtrlAltPass.exe")
         foreach ($bin in $expected) {
           $path = "bin/$bin"
           if (Test-Path $path) {
