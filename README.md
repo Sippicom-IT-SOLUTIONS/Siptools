@@ -131,11 +131,12 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/Ctr
 
 ### 5. 📡 PingMeMaybe (`PingMeMaybe.exe` / `PingMeMaybe.ps1`)
 **Comprehensive Network Diagnostics, Port Scanner, DNS/DHCP Inspector & SSL Suite**
-- **DNS & DHCP Origin Fingerprinting**: Probes DHCP & DNS servers to automatically distinguish between **Windows Active Directory Domain Controllers / Servers** (ports 53, 88, 389, 445), **Router / Gateway Appliances** (Fritz!Box, UniFi, Cisco), and **Public DNS Providers** (Cloudflare, Google, Quad9).
-- **Fast Subnet IP & Port Scanner**: Scans entire `/24` subnets across 60 parallel threads, discovering hostnames and open ports (80, 443, 22, 3389, 445, 8080) with instant one-click action links for **Web UI (HTTP/HTTPS)**, **SSH**, **RDP**, and **SMB Shares**.
+- **Direct Column Header Sorting**: Instant natural numerical IPv4 sorting, alphabetical hostname, latency, MAC, and active service grouping (Web UI, SSH, RDP, SMB, SQL) directly by clicking table column headers.
+- **DNS & DHCP Origin Fingerprinting**: Probes DHCP & DNS servers to automatically distinguish between **Windows Active Directory Domain Controllers / Servers** (ports 53, 88, 389, 445), **Router / Gateway Appliances** (Fritz!Box, UniFi, Cisco), and **Public DNS Providers** (Cloudflare, Google, Quad9, Cisco Meraki).
+- **Fast Subnet IP & Port Scanner**: Scans entire `/24` subnets across 256 parallel worker threads, discovering hostnames, enterprise hardware profiles, printers, SQL servers, and open ports with instant one-click action links for **Web UI (HTTP/HTTPS)**, **SSH**, **RDP**, and **SMB Shares**.
 - **SSL / TLS Certificate Inspector**: Analyzes remote HTTPS certificates, issuer chains, cipher suites, and warns if expiration is within 30 days.
 - **Public WAN IP & Geolocation**: Instant external IP, ISP name, and city/country.
-- **DNS Speed Benchmark**: Compares local DNS response latency against Cloudflare (`1.1.1.1`), Google (`8.8.8.8`), Quad9 (`9.9.9.9`), and OpenDNS.
+- **DNS Speed Benchmark**: Compares local DNS response latency against Cisco Meraki (`208.67.222.222`), Cloudflare (`1.1.1.1`), Google (`8.8.8.8`), Quad9 (`9.9.9.9`), and OpenDNS.
 - **Wi-Fi Signal & Nearby SSID Sniffer**: Real-time signal strength (%), channels, encryption types (WPA2/WPA3), and nearby network scanner.
 - **Bandwidth Speedtest & Live Ping**: Multi-stream download throughput tester (Mbps) and continuous ping graph.
 
@@ -185,15 +186,11 @@ For locked-down or offline environments where script execution is restricted, pr
 
 ## 🔄 Automated Deployment Pipeline
 
-When developing tools locally, use the automated build and watcher scripts to ensure local edits are immediately compiled and pushed to GitHub:
+When developing tools locally, use the automated build scripts:
 
 - **Manual One-Click Deploy**:
   ```powershell
-  powershell -File C:\Users\aguerster\Documents\__Projects\Scripts\Build-And-Deploy.ps1
-  ```
-- **Continuous Auto-Deploy Watcher**:
-  ```powershell
-  powershell -File C:\Users\aguerster\Documents\__Projects\Scripts\Watch-And-Deploy.ps1
+  powershell -ExecutionPolicy Bypass -File .\Build-And-Deploy.ps1
   ```
 
 ---
