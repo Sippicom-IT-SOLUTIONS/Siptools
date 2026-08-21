@@ -157,3 +157,12 @@ repo's commit history when the changelog was introduced.
   path stopping at your gateway even though the device further along was
   correctly found — the glowing path now runs all the way through.
 
+## 2026-08-21 16:22:03 — PingMeMaybe: gateway placement and cleaner connectors
+
+- **PingMeMaybe** v1.0.9 — Your gateway/firewall now shows up inside your
+  local network's box, where it belongs. Fixed connector lines between
+  networks visually cutting through a network's own devices before reaching
+  its gateway — a network's devices are now positioned entirely on the far
+  side of its gateway from the connecting line, so the line only ever
+  touches the gateway itself.
+
