@@ -136,3 +136,15 @@ repo's commit history when the changelog was introduced.
   switch/gateway from the same spot looking like a single line instead of
   one line per device.
 
+## 2026-08-21 15:56:08 — PingMeMaybe: multi-network map redesign
+
+- **PingMeMaybe** v1.0.7 — Every network is now drawn as its own star: your
+  local devices fan out around your switch, and each other network the app
+  discovers (from a scan or from a traced route) gets its own star too,
+  centered on a best-effort guess at that network's gateway/firewall. The
+  "Map Shape" picker is gone — this replaces it as the one correct view.
+  Traced routes now show an explicit "Internet" box where traffic leaves
+  your network, or flag it as a VPN tunnel if it looks like one instead.
+  Also added an option to manually drag individual devices to reposition
+  them on the map.
+
