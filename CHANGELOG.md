@@ -109,3 +109,11 @@ repo's commit history when the changelog was introduced.
   traffic actually took along the way — not just the final destination —
   with hostnames resolved where available.
 
+## 2026-08-21 14:45:28 — PingMeMaybe topology map fixes
+
+- **PingMeMaybe** v1.0.4 — Fixed node labels/IP text staying frozen in place
+  while you dragged their boxes around. Devices on different networks are
+  now grouped and labeled by their actual subnet instead of one generic
+  "remote" bucket. Dragging the map around now feels like a large open
+  canvas instead of being limited to roughly the window's own size.
+
