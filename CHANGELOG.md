@@ -148,3 +148,12 @@ repo's commit history when the changelog was introduced.
   Also added an option to manually drag individual devices to reposition
   them on the map.
 
+## 2026-08-21 16:10:23 — PingMeMaybe: fixes from your screenshot
+
+- **PingMeMaybe** v1.0.8 — Networks now actually render as a real star (a
+  full circle around the hub) instead of a lopsided fan that looked
+  scattered. Fixed your local network's box not including the switch itself.
+  Fixed tracing to a device inside an already-known network showing the
+  path stopping at your gateway even though the device further along was
+  correctly found — the glowing path now runs all the way through.
+
