@@ -1,4 +1,4 @@
-$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/bin/TurnKeyPC.exe'
+$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/bin/TurnKeyPC.exe'
 $dest = Join-Path $env:TEMP 'TurnKeyPC.exe'
 
 Write-Host '--> Launching SIPPICOM TurnKeyPC from Cloud...' -ForegroundColor Cyan

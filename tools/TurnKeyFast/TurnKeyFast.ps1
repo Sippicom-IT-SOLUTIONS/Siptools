@@ -1,4 +1,4 @@
-$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/bin/TurnKeyFast.exe'
+$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/bin/TurnKeyFast.exe'
 $dest = Join-Path $env:TEMP 'TurnKeyFast.exe'
 
 Write-Host '--> Launching SIPPICOM TurnKeyFast (Silent) from Cloud...' -ForegroundColor Cyan

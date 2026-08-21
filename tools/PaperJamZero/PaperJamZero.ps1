@@ -1,4 +1,4 @@
-$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/bin/PaperJamZero.exe'
+$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/bin/PaperJamZero.exe'
 $dest = Join-Path $env:TEMP 'PaperJamZero.exe'
 
 Write-Host '--> Launching SIPPICOM PaperJamZero from Cloud...' -ForegroundColor Cyan

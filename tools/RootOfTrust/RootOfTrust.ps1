@@ -1,6 +1,6 @@
 $FilePath = if ($args.Count -gt 0) { $args[0] } else { $null }
 
-$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/bin/RootOfTrust.exe'
+$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/bin/RootOfTrust.exe'
 $dest = Join-Path $env:TEMP 'RootOfTrust.exe'
 
 Write-Host '--> Launching SIPPICOM RootOfTrust from Cloud...' -ForegroundColor Cyan

@@ -1,9 +1,9 @@
 # 🏢 SIPPICOM IT-Solutions — Cloud Suite & Tools
 
-[![CI Status](https://github.com/Sippicom-IT-SOLUTIONS/tools/actions/workflows/verify-and-release.yml/badge.svg)](https://github.com/Sippicom-IT-SOLUTIONS/tools/actions)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20x64-0078D6.svg?logo=windows)](https://github.com/Sippicom-IT-SOLUTIONS/tools)
-[![PowerShell](https://img.shields.io/badge/PowerShell-5.1%20%7C%207%2B-5391FE.svg?logo=powershell)](https://github.com/Sippicom-IT-SOLUTIONS/tools)
-[![License](https://img.shields.io/badge/License-Proprietary%20%2F%20Internal-F78D1F.svg)](https://github.com/Sippicom-IT-SOLUTIONS/tools)
+[![CI Status](https://github.com/Sippicom-IT-SOLUTIONS/Siptools/actions/workflows/verify-and-release.yml/badge.svg)](https://github.com/Sippicom-IT-SOLUTIONS/Siptools/actions)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20x64-0078D6.svg?logo=windows)](https://github.com/Sippicom-IT-SOLUTIONS/Siptools)
+[![PowerShell](https://img.shields.io/badge/PowerShell-5.1%20%7C%207%2B-5391FE.svg?logo=powershell)](https://github.com/Sippicom-IT-SOLUTIONS/Siptools)
+[![License](https://img.shields.io/badge/License-Proprietary%20%2F%20Internal-F78D1F.svg)](https://github.com/Sippicom-IT-SOLUTIONS/Siptools)
 
 Modern, high-performance, multi-threaded administrative suite and deployment engine for Windows workstations and servers. All utilities are directly executable in memory via zero-token PowerShell one-liners (`irm | iex`) or as standalone 64-bit `.exe` binaries with zero runtime dependencies.
 
@@ -14,7 +14,7 @@ Modern, high-performance, multi-threaded administrative suite and deployment eng
 Launch the complete interactive SIPPICOM Cloud Suite menu with a single command in any Windows PowerShell window:
 
 ```powershell
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/main.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/main.ps1 | iex
 ```
 
 ```text
@@ -59,12 +59,12 @@ Select a SIPPICOM Cloud Tool:
 
 | Tool | Focus Area | One-Liner Execution Command |
 | :--- | :--- | :--- |
-| **🔐 RootOfTrust** | RDP Security & Code Signing | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/RootOfTrust/RootOfTrust.ps1 \| iex` |
-| **🖨️ PaperJamZero** | Spooler & Network Queue Engine | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/PaperJamZero/PaperJamZero.ps1 \| iex` |
-| **🚀 TurnKeyPC** | Workstation Setup (Interactive) | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/TurnKeyPC/TurnKeyPC.ps1 \| iex` |
-| **⚡ TurnKeyFast** | Workstation Setup (Unattended) | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/TurnKeyFast/TurnKeyFast.ps1 \| iex` |
-| **🔑 CtrlAltPass** | Enterprise Credential Security | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/CtrlAltPass/CtrlAltPass.ps1 \| iex` |
-| **📡 PingMeMaybe** | Network Diagnostics, Ports & SSL | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/PingMeMaybe/PingMeMaybe.ps1 \| iex` |
+| **🔐 RootOfTrust** | RDP Security & Code Signing | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/RootOfTrust/RootOfTrust.ps1 \| iex` |
+| **🖨️ PaperJamZero** | Spooler & Network Queue Engine | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/PaperJamZero/PaperJamZero.ps1 \| iex` |
+| **🚀 TurnKeyPC** | Workstation Setup (Interactive) | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/TurnKeyPC/TurnKeyPC.ps1 \| iex` |
+| **⚡ TurnKeyFast** | Workstation Setup (Unattended) | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/TurnKeyFast/TurnKeyFast.ps1 \| iex` |
+| **🔑 CtrlAltPass** | Enterprise Credential Security | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/CtrlAltPass/CtrlAltPass.ps1 \| iex` |
+| **📡 PingMeMaybe** | Network Diagnostics, Ports & SSL | `irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/PingMeMaybe/PingMeMaybe.ps1 \| iex` |
 
 ---
 
@@ -78,7 +78,7 @@ Select a SIPPICOM Cloud Tool:
 - Signs `.rdp` connection files via native `rdpsign.exe` using certificate SHA-256 thumbprints.
 
 ```powershell
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/RootOfTrust/RootOfTrust.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/RootOfTrust/RootOfTrust.ps1 | iex
 ```
 
 ---
@@ -92,7 +92,7 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/Roo
 - Performs full native printer backup and restoration migrations (`PrintBrm.exe` `.printerExport` format).
 
 ```powershell
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/PaperJamZero/PaperJamZero.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/PaperJamZero/PaperJamZero.ps1 | iex
 ```
 
 ---
@@ -109,10 +109,10 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/Pap
 
 ```powershell
 # Interactive Deployment:
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/TurnKeyPC/TurnKeyPC.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/TurnKeyPC/TurnKeyPC.ps1 | iex
 
 # Silent Unattended Deployment:
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/TurnKeyFast/TurnKeyFast.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/TurnKeyFast/TurnKeyFast.ps1 | iex
 ```
 
 ---
@@ -124,7 +124,7 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/Tur
 - Features automatic clipboard copy and clean, distraction-free corporate GUI.
 
 ```powershell
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/CtrlAltPass/CtrlAltPass.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/CtrlAltPass/CtrlAltPass.ps1 | iex
 ```
 
 ---
@@ -141,7 +141,7 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/Ctr
 - **Bandwidth Speedtest & Live Ping**: Multi-stream download throughput tester (Mbps) and continuous ping graph.
 
 ```powershell
-irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/tools/PingMeMaybe/PingMeMaybe.ps1 | iex
+irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/PingMeMaybe/PingMeMaybe.ps1 | iex
 ```
 
 ---

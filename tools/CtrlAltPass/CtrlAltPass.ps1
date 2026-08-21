@@ -1,4 +1,4 @@
-$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/tools/main/bin/CtrlAltPass.exe'
+$url = 'https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/bin/CtrlAltPass.exe'
 $dest = Join-Path $env:TEMP 'CtrlAltPass.exe'
 
 Write-Host '--> Launching SIPPICOM CtrlAltPass from Cloud...' -ForegroundColor Cyan
