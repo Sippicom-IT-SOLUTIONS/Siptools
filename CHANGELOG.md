@@ -166,3 +166,9 @@ repo's commit history when the changelog was introduced.
   side of its gateway from the connecting line, so the line only ever
   touches the gateway itself.
 
+## 2026-08-21 16:44:06 — PingMeMaybe: fixed overlapping star nodes
+
+- **PingMeMaybe** v1.0.10 — Devices in a network's star were positioned
+  closer together than the boxes are wide, so they were guaranteed to
+  overlap regardless of how many there were. Spaced them out properly.
+
