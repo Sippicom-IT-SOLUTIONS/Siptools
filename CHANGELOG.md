@@ -88,3 +88,14 @@ repo's commit history when the changelog was introduced.
   and fixed a validation badge that could show "valid" incorrectly for
   case-sensitive patterns.
 
+## 2026-08-21 14:13:23 — PingMeMaybe topology map improvements
+
+- **PingMeMaybe** v1.0.2 — Traced routes to a device on a different network
+  or to an internet host (e.g. `google.com`) now draw correctly through the
+  gateway/firewall instead of appearing to jump straight from the switch;
+  devices on a different subnet are now visually grouped separately from
+  your local network. Also: connection lines no longer bunch together when
+  many devices are shown, added clearer section labels and an "Internet &
+  Remote Networks" filter, and fixed the category filter dropdown not
+  actually filtering anything.
+
