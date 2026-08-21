@@ -117,3 +117,13 @@ repo's commit history when the changelog was introduced.
   "remote" bucket. Dragging the map around now feels like a large open
   canvas instead of being limited to roughly the window's own size.
 
+## 2026-08-21 15:05:15 — PingMeMaybe topology map: enterprise-style redesign
+
+- **PingMeMaybe** v1.0.5 — The map now lays out like a standard network
+  diagram: your PC, switch, and gateway sit in a straight line (the "trunk"),
+  with everything else branching off to the side instead of sitting in the
+  way. Connection lines now turn at clean right angles around other devices
+  instead of cutting diagonally through them. After a trace, everything not
+  on the traced path fades out and the actual route glows, so the path you
+  care about stands out immediately.
+
