@@ -63,3 +63,28 @@ repo's commit history when the changelog was introduced.
   TrueColor orange, and codepage-safe rendering.
 - Fixed a raw string formatting bug in CtrlAltPass and updated the README
   with live GitHub URLs.
+
+## 2026-08-21 13:52:55 — Security & correctness fixes across all 5 tools
+
+- **RootOfTrust** v1.0.1 — Hardened certificate/RDP-signing commands against
+  malformed input, fixed leftover trust-store entries not being fully
+  cleaned up when a certificate is deleted, and fixed a bug where signing
+  could reuse the wrong certificate for a similarly-named host.
+- **PaperJamZero** v1.0.1 — Hardened printer add/remove commands against
+  malformed input, fixed the delete-printer action always reporting success
+  even when it failed, and the app no longer keeps running fully unelevated
+  if administrator rights are declined.
+- **PingMeMaybe** v1.0.1 — Fixed a bug where scanning up to `255.255.255.255`
+  could freeze the app, fixed a crash when tracing a route from the
+  right-click menu, closed a stored-content risk in the HTML export, and
+  fixed a resource leak in command execution.
+- **TurnKeyPC** / **TurnKeyFast** v1.0.1 — Fixed a bug where a failed
+  software install (e.g. no network, package unavailable) could be logged
+  as successful; hardened long-running install commands against a rare
+  hang.
+- **CtrlAltPass** v1.0.1 — Fixed the custom-pattern generator producing a
+  stray character in grouped/quantified patterns, fixed negated character
+  classes (`[^0-9]`) not working correctly, improved randomness distribution,
+  and fixed a validation badge that could show "valid" incorrectly for
+  case-sensitive patterns.
+
