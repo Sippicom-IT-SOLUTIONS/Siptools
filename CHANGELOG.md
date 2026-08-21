@@ -127,3 +127,12 @@ repo's commit history when the changelog was introduced.
   on the traced path fades out and the actual route glows, so the path you
   care about stands out immediately.
 
+## 2026-08-21 15:17:41 — PingMeMaybe topology map: zoom, no more overlapping labels
+
+- **PingMeMaybe** v1.0.6 — You can now zoom the topology map in and out with
+  the scroll wheel (drag still pans), centered on wherever your cursor is.
+  Fixed network labels overlapping each other when several different
+  subnets were shown side by side. Fixed multiple devices connecting to the
+  switch/gateway from the same spot looking like a single line instead of
+  one line per device.
+
