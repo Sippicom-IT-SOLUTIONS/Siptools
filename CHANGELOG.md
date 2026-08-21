@@ -99,3 +99,13 @@ repo's commit history when the changelog was introduced.
   Remote Networks" filter, and fixed the category filter dropdown not
   actually filtering anything.
 
+## 2026-08-21 14:34:48 — PingMeMaybe topology map: pan, layout shapes, full hop chain
+
+- **PingMeMaybe** v1.0.3 — You can now click and drag the topology map to move
+  it around (plus a "Reset View" button), instead of only scrolling
+  vertically. Added a "Map Shape" selector to display the same devices as a
+  Star, Bus, Line, Ring, Mesh, Fully Meshed, or Tree diagram, alongside the
+  original real-routing view. Tracing a route now shows every hop the
+  traffic actually took along the way — not just the final destination —
+  with hostnames resolved where available.
+
