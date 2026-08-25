@@ -180,3 +180,11 @@ repo's commit history when the changelog was introduced.
   passwords. Spelled without umlauts so every generated password is still
   easy to type on any keyboard.
 
+## 2026-08-25 13:43:45 — PingMeMaybe: star margins and hub-stacking fix
+
+- **PingMeMaybe** v1.0.11 — Devices in a network's star could land stacked
+  directly on top of the switch/gateway they orbit, and a network with a lot
+  of devices could overlap the network drawn next to it. Both are fixed:
+  every star now keeps a solid gap between its hub and the nearest device,
+  and wide stars no longer crowd into their neighbor's space.
+
