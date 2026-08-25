@@ -172,3 +172,11 @@ repo's commit history when the changelog was introduced.
   closer together than the boxes are wide, so they were guaranteed to
   overlap regardless of how many there were. Spaced them out properly.
 
+## 2026-08-25 13:13:14 — CtrlAltPass: bigger, German wordbook
+
+- **CtrlAltPass** v1.0.2 — The "Wordbook Dictionary Engine" password mode
+  now draws from 238 German words (up from 60 English ones) — nature,
+  animals, sky, myth, and more — giving noticeably stronger word-based
+  passwords. Spelled without umlauts so every generated password is still
+  easy to type on any keyboard.
+
