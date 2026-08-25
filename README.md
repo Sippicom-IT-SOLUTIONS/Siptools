@@ -197,7 +197,7 @@ When developing tools locally, use the automated build scripts:
 
 ## Kontakt
 
-**Haupt-Maintainer / Ansprechpartner für dieses Projekt:** Aya Gürster (ag@sippicom.com)
+**Haupt-Maintainer / Ansprechpartner für dieses Projekt:** Aya Gürster
 
 ---
 
