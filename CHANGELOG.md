@@ -194,3 +194,10 @@ repo's commit history when the changelog was introduced.
   protect the code behind these tools from casual reverse-engineering. No
   tool's features or behavior changed.
 
+## 2026-08-26 12:09:05 — Build pipeline: obfuscation fix
+
+- The previous build's binary protection didn't actually protect anything —
+  fixed, and the build now automatically double-checks the protection took
+  effect on every binary before it can ship. No tool's features or behavior
+  changed.
+
