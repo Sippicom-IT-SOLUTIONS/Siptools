@@ -188,3 +188,9 @@ repo's commit history when the changelog was introduced.
   every star now keeps a solid gap between its hub and the nearest device,
   and wide stars no longer crowd into their neighbor's space.
 
+## 2026-08-26 11:38:12 — Build pipeline: binary protection
+
+- Every binary in this suite is now obfuscated as part of the build, to
+  protect the code behind these tools from casual reverse-engineering. No
+  tool's features or behavior changed.
+
