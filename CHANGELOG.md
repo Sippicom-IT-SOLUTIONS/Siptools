@@ -201,3 +201,87 @@ repo's commit history when the changelog was introduced.
   effect on every binary before it can ship. No tool's features or behavior
   changed.
 
+## 2026-09-02 08:47:07
+- **RootOfTrust** v1.0.2 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.12 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.3 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.2 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.2 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 08:49:36
+- **RootOfTrust** v1.0.3 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.13 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.4 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.3 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.3 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 08:56:36
+- **RootOfTrust** v1.0.4 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.14 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.5 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.4 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.4 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 09:02:29
+- **RootOfTrust** v1.0.5 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.15 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.6 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.5 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.5 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 09:12:11
+- **RootOfTrust** v1.0.6 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.16 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.7 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.6 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.6 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 09:20:58
+- **RootOfTrust** v1.0.7 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.17 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.8 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.7 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.7 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 09:53:13
+- **RootOfTrust** v1.0.8 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.18 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.9 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.8 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.8 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 09:54:02
+- **RootOfTrust** v1.0.9 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.19 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.10 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.9 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.9 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 09:55:57
+- **RootOfTrust** v1.0.10 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.20 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.11 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.10 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.10 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 10:00:04
+- **RootOfTrust** v1.0.11 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.21 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.12 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.11 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.11 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 10:33:04
+- **RootOfTrust** v1.0.12 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.22 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.13 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.12 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.12 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
+## 2026-09-02 10:33:39
+- **RootOfTrust** v1.0.13 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PingMeMaybe** v1.0.23 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **CtrlAltPass** v1.0.14 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **PaperJamZero** v1.0.13 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+- **TurnKey** v1.0.13 - Updated RootOfTrust, PingMeMaybe, CtrlAltPass, PaperJamZero, TurnKey
+
