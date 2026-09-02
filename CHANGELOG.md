@@ -304,3 +304,6 @@ repo's commit history when the changelog was introduced.
 ## 2026-09-02 13:17:36
 - **CtrlAltPass** v1.0.17 - Updated CtrlAltPass
 
+## 2026-09-02 15:00:10
+- **CtrlAltPass** v1.0.18 - CtrlAltPass: fix Fuerst dative form (Fuerstn -> Fuersten)
+
