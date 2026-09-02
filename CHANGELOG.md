@@ -298,3 +298,9 @@ repo's commit history when the changelog was introduced.
 ## 2026-09-02 11:10:34
 - **PingMeMaybe** v1.0.25 - Updated PingMeMaybe
 
+## 2026-09-02 13:13:28
+- **CtrlAltPass** v1.0.16 - Updated CtrlAltPass
+
+## 2026-09-02 13:17:36
+- **CtrlAltPass** v1.0.17 - Updated CtrlAltPass
+
