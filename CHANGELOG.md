@@ -307,3 +307,6 @@ repo's commit history when the changelog was introduced.
 ## 2026-09-02 15:00:10
 - **CtrlAltPass** v1.0.18 - CtrlAltPass: fix Fuerst dative form (Fuerstn -> Fuersten)
 
+## 2026-09-02 15:15:00
+- Improved the build pipeline's changelog generation to show real per-file changes (line deltas, touched method names) instead of a generic "Updated <Tool>" placeholder.
+
