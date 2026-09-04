@@ -310,3 +310,7 @@ repo's commit history when the changelog was introduced.
 ## 2026-09-02 15:15:00
 - Improved the build pipeline's changelog generation to show real per-file changes (line deltas, touched method names) instead of a generic "Updated <Tool>" placeholder.
 
+## 2026-09-04 08:40:21
+- **PaperJamZero** v1.0.16 - PaperJamZero: TCP/IP printer port is now just the raw IP, not IP_<ip>
+  - PaperJamZero.cs (+1/-1 lines) - near: Action_AddIpPrinter
+
