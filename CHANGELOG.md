@@ -322,3 +322,7 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.27 - PingMeMaybe: fix topology node-box overlap - spoke rings were 140px apart, less than the 190px box width, so 9+ local devices overlapped on the second ring. Ring spacing now 215px (>= box diagonal).
   - PingMeMaybe.cs (+9/-1 lines) - near: SubnetKeyOf
 
+## 2026-09-04 13:31:00
+- **PingMeMaybe** v1.0.28 - PingMeMaybe: fix trace-flow pulse direction on the This-PC spoke - it animated switch->PC (looked like the switch sending to you); This PC is the trace source so the pulse now flows PC->switch, away from you toward the destination.
+  - PingMeMaybe.cs (+13/-5 lines) - near: OnPaint, DrawStarSpoke
+
