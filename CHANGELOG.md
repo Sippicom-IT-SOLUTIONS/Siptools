@@ -314,3 +314,7 @@ repo's commit history when the changelog was introduced.
 - **PaperJamZero** v1.0.16 - PaperJamZero: TCP/IP printer port is now just the raw IP, not IP_<ip>
   - PaperJamZero.cs (+1/-1 lines) - near: Action_AddIpPrinter
 
+## 2026-09-04 09:03:08
+- **PingMeMaybe** v1.0.26 - PingMeMaybe: fix-and-perfect pass - 21 review findings (thread-count parse, unbounded scan range, CSV/JSON injection, redirect scan-pivot, resource leaks, mask-aware subnet, DNS PTR parse, trace re-entrancy/stale-node, split-panel sizing, DNS-dialog UI-freeze, label overlaps, speedtest cancel)
+  - PingMeMaybe.cs (+247/-37 lines) - near: EnableDoubleBuffering, BuildView0_NetworkInfo, LoadNetworkInformation, ExecuteRenewIpAsync, ExecuteResetStackAsync
+
