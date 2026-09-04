@@ -318,3 +318,7 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.26 - PingMeMaybe: fix-and-perfect pass - 21 review findings (thread-count parse, unbounded scan range, CSV/JSON injection, redirect scan-pivot, resource leaks, mask-aware subnet, DNS PTR parse, trace re-entrancy/stale-node, split-panel sizing, DNS-dialog UI-freeze, label overlaps, speedtest cancel)
   - PingMeMaybe.cs (+247/-37 lines) - near: EnableDoubleBuffering, BuildView0_NetworkInfo, LoadNetworkInformation, ExecuteRenewIpAsync, ExecuteResetStackAsync
 
+## 2026-09-04 13:12:09
+- **PingMeMaybe** v1.0.27 - PingMeMaybe: fix topology node-box overlap - spoke rings were 140px apart, less than the 190px box width, so 9+ local devices overlapped on the second ring. Ring spacing now 215px (>= box diagonal).
+  - PingMeMaybe.cs (+9/-1 lines) - near: SubnetKeyOf
+
