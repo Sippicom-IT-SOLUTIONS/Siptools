@@ -346,3 +346,7 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.33 - PingMeMaybe: topology map now profiles ARP-discovered devices by MAC - previously a host that appeared on the map via the ARP sweep (not port-scanned) showed a bare 'Netzwerk-Host'/'vendor-Geraet' even when its MAC vendor was known. New DescribeDeviceByMac reuses the full offline OUI DB, the scan's vendor heuristics, and this session's cached online MAC lookups, so a known MAC shows what device it actually is (Raspberry Pi, Apple, UniFi, FRITZ!Box, Cisco, NAS, etc.).
   - PingMeMaybe.cs (+56/-6 lines) - near: PopulateTopologyMap, PopulateTopologyMapAsync, ResolveCategory
 
+## 2026-09-14 12:08:17
+- **TurnKey** v1.0.15 - TurnKey: fix Office install putting multiple/wrong versions on a machine - now installs exactly Microsoft 365 Apps for Enterprise (O365ProPlusRetail), German de-de, 64-bit via the Office Deployment Tool with a pinned config XML, instead of 'winget install Microsoft.Office' (consumer edition, could stack a 2nd Office) plus a broken '/configure'-with-no-XML fallback. Install/repair only (no RemoveMSI), so other Office installs are left untouched.
+  - TurnKey.cs (+41/-11 lines) - near: ExecuteDeployment, Task_InstallOffice
+
