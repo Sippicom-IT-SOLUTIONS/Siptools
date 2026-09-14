@@ -334,3 +334,7 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.30 - PingMeMaybe: fix Subnet-Scanner stats line overrunning the export buttons - the scan-counts summary (online hosts/firewalls/SQL/RDP/etc) grew with a full scan and covered the CSV/JSON/HTML export buttons. Moved it to its own row below the filter/export toolbar.
   - PingMeMaybe.cs (+7/-2 lines)
 
+## 2026-09-14 08:43:56
+- **PingMeMaybe** v1.0.31 - PingMeMaybe: add 'Zur verfolgten Route zuruck' button to the topology inspector - after tracing a dataflow, clicking a node overwrote the route details with that node's info and there was no way back to the traced path without re-scanning. The button restores the last trace's route listing and clears the node selection (the map's path highlight persists), no re-trace needed.
+  - PingMeMaybe.cs (+30/-2 lines)
+
