@@ -326,3 +326,7 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.28 - PingMeMaybe: fix trace-flow pulse direction on the This-PC spoke - it animated switch->PC (looked like the switch sending to you); This PC is the trace source so the pulse now flows PC->switch, away from you toward the destination.
   - PingMeMaybe.cs (+13/-5 lines) - near: OnPaint, DrawStarSpoke
 
+## 2026-09-14 08:28:08
+- **PingMeMaybe** v1.0.29 - PingMeMaybe: remove the SSL-/TLS-Inspektor tab entirely (limited use case, unreliable in practice). Dropped the nav item, view, build method and all SSL fields/helpers (InspectSslCertificateAsync/ExportSslCertificate); renumbered the remaining tabs (WAN/WLAN/Speedtest) from 4/5/6 to 3/4/5.
+  - PingMeMaybe.cs (+16/-245 lines) - near: InitializeModernUI, GetDefaultGatewayIp, BuildView3_WanDnsBenchmark, RunDnsBenchmarkAsync, BuildView4_WifiSniffer
+
