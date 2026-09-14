@@ -342,3 +342,7 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.32 - PingMeMaybe: make topology 'Karte exportieren' actually export the map - it previously only copied a text list to the clipboard with feedback going to a status label on another tab (looked like it did nothing). Now renders the full map (all nodes, not just the viewport) to a PNG via a Save dialog and confirms the saved path in a message box.
   - PingMeMaybe.cs (+85/-19 lines) - near: BuildView2_TopologyMap, ExportTopologyMap, OnPaint
 
+## 2026-09-14 12:00:39
+- **PingMeMaybe** v1.0.33 - PingMeMaybe: topology map now profiles ARP-discovered devices by MAC - previously a host that appeared on the map via the ARP sweep (not port-scanned) showed a bare 'Netzwerk-Host'/'vendor-Geraet' even when its MAC vendor was known. New DescribeDeviceByMac reuses the full offline OUI DB, the scan's vendor heuristics, and this session's cached online MAC lookups, so a known MAC shows what device it actually is (Raspberry Pi, Apple, UniFi, FRITZ!Box, Cisco, NAS, etc.).
+  - PingMeMaybe.cs (+56/-6 lines) - near: PopulateTopologyMap, PopulateTopologyMapAsync, ResolveCategory
+
