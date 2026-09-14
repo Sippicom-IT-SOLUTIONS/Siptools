@@ -338,3 +338,7 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.31 - PingMeMaybe: add 'Zur verfolgten Route zuruck' button to the topology inspector - after tracing a dataflow, clicking a node overwrote the route details with that node's info and there was no way back to the traced path without re-scanning. The button restores the last trace's route listing and clears the node selection (the map's path highlight persists), no re-trace needed.
   - PingMeMaybe.cs (+30/-2 lines)
 
+## 2026-09-14 09:01:51
+- **PingMeMaybe** v1.0.32 - PingMeMaybe: make topology 'Karte exportieren' actually export the map - it previously only copied a text list to the clipboard with feedback going to a status label on another tab (looked like it did nothing). Now renders the full map (all nodes, not just the viewport) to a PNG via a Save dialog and confirms the saved path in a message box.
+  - PingMeMaybe.cs (+85/-19 lines) - near: BuildView2_TopologyMap, ExportTopologyMap, OnPaint
+
