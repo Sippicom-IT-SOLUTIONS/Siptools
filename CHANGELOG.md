@@ -330,3 +330,7 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.29 - PingMeMaybe: remove the SSL-/TLS-Inspektor tab entirely (limited use case, unreliable in practice). Dropped the nav item, view, build method and all SSL fields/helpers (InspectSslCertificateAsync/ExportSslCertificate); renumbered the remaining tabs (WAN/WLAN/Speedtest) from 4/5/6 to 3/4/5.
   - PingMeMaybe.cs (+16/-245 lines) - near: InitializeModernUI, GetDefaultGatewayIp, BuildView3_WanDnsBenchmark, RunDnsBenchmarkAsync, BuildView4_WifiSniffer
 
+## 2026-09-14 08:33:53
+- **PingMeMaybe** v1.0.30 - PingMeMaybe: fix Subnet-Scanner stats line overrunning the export buttons - the scan-counts summary (online hosts/firewalls/SQL/RDP/etc) grew with a full scan and covered the CSV/JSON/HTML export buttons. Moved it to its own row below the filter/export toolbar.
+  - PingMeMaybe.cs (+7/-2 lines)
+
