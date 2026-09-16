@@ -398,3 +398,7 @@ repo's commit history when the changelog was introduced.
 - **TurnKey** v1.0.19 - Redesign the other 4 tool icons in the PingMeMaybe line-art style (higher quality, smooth beziers/round strokes): RootOfTrust = shield + checkmark, CtrlAltPass = padlock, PaperJamZero = desktop printer, and AutoDeploy changed from a key to a MONITOR + install/download arrow so it clearly reads as 'deploy software to a PC'. All the tool icons now share one consistent orange outline style.
   - No source diff detected (rebuild only).
 
+## 2026-09-16 16:35:36
+- **PingMeMaybe** v1.0.38 - PingMeMaybe: add the SIPPICOM logo to the sidebar (replaces the plain SIPPICOM text with the embedded logo image), and fix auto-selection of the scanned adapter. GetLocalIp/AutoPopulateSubnet no longer just take the first Up adapter (which on machines with VirtualBox/Hyper-V/VPN could pick a virtual 192.168.56.x subnet) - they now score every adapter and pick the primary: default-gateway present (strongest), then physical Ethernet/Wi-Fi type, then non-virtual name.
+  - PingMeMaybe.cs (+80/-32 lines) - near: InitializeModernUI, AutoPopulateSubnet, ExportTopologyMap, GetLocalIp
+
