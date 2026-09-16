@@ -402,3 +402,7 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.38 - PingMeMaybe: add the SIPPICOM logo to the sidebar (replaces the plain SIPPICOM text with the embedded logo image), and fix auto-selection of the scanned adapter. GetLocalIp/AutoPopulateSubnet no longer just take the first Up adapter (which on machines with VirtualBox/Hyper-V/VPN could pick a virtual 192.168.56.x subnet) - they now score every adapter and pick the primary: default-gateway present (strongest), then physical Ethernet/Wi-Fi type, then non-virtual name.
   - PingMeMaybe.cs (+80/-32 lines) - near: InitializeModernUI, AutoPopulateSubnet, ExportTopologyMap, GetLocalIp
 
+## 2026-09-16 16:48:03
+- **PingMeMaybe** v1.0.39 - PingMeMaybe: fix slow startup. DiscoverEdgeAndVpnSubnets ran an Active Directory computer enumeration (up to 3000 hosts, a DNS lookup each) plus a route.exe process synchronously while building the scanner tab - blocking the window from appearing (an LDAP bind alone stalls for seconds, worse on a domain). Now startup lists only the fast local-adapter subnets; the slow AD/routing discovery runs on a background thread after the window is shown and appends its results to the dropdown when ready (full discovery still runs at actual scan time). Measured ~1000ms to ~400ms to window here, more on a domain machine.
+  - PingMeMaybe.cs (+47/-3 lines) - near: GetHostCpuDescription, BuildView1_SubnetScanner, GenerateIpRange
+
