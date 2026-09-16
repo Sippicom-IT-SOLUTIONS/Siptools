@@ -374,3 +374,15 @@ repo's commit history when the changelog was introduced.
 - **TurnKey** v1.0.17 - Icons: fix every tool's window/taskbar icon falling back to the default WinForms icon. LoadEmbeddedIcon did s.CopyTo(ms) then new Icon(ms) WITHOUT rewinding - ms.Position was left at the end, so new Icon(stream) (which reads from the current position, unlike Image.FromStream which seeks) got zero bytes and threw, LoadEmbeddedIcon returned null, and Form.Icon=null silently reverted to the generic .NET icon. Added ms.Position=0. Fixes the title-bar/taskbar icon for all 5 tools (the exe file icons were always fine since those are baked into the PE via /win32icon).
   - No source diff detected (rebuild only).
 
+## 2026-09-16 16:02:34
+- **RootOfTrust** v1.0.17 - PingMeMaybe icon: redraw as thin orange LINE-ART outline (hollow teardrop + hollow center ring + ping signal arcs) to match the SIPPICOM brand outline style of the other tool icons, instead of the previous bold solid-filled pin.
+  - No source diff detected (rebuild only).
+- **PingMeMaybe** v1.0.36 - PingMeMaybe icon: redraw as thin orange LINE-ART outline (hollow teardrop + hollow center ring + ping signal arcs) to match the SIPPICOM brand outline style of the other tool icons, instead of the previous bold solid-filled pin.
+  - No source diff detected (rebuild only).
+- **CtrlAltPass** v1.0.21 - PingMeMaybe icon: redraw as thin orange LINE-ART outline (hollow teardrop + hollow center ring + ping signal arcs) to match the SIPPICOM brand outline style of the other tool icons, instead of the previous bold solid-filled pin.
+  - No source diff detected (rebuild only).
+- **PaperJamZero** v1.0.19 - PingMeMaybe icon: redraw as thin orange LINE-ART outline (hollow teardrop + hollow center ring + ping signal arcs) to match the SIPPICOM brand outline style of the other tool icons, instead of the previous bold solid-filled pin.
+  - No source diff detected (rebuild only).
+- **TurnKey** v1.0.18 - PingMeMaybe icon: redraw as thin orange LINE-ART outline (hollow teardrop + hollow center ring + ping signal arcs) to match the SIPPICOM brand outline style of the other tool icons, instead of the previous bold solid-filled pin.
+  - No source diff detected (rebuild only).
+
