@@ -386,3 +386,15 @@ repo's commit history when the changelog was introduced.
 - **TurnKey** v1.0.18 - PingMeMaybe icon: redraw as thin orange LINE-ART outline (hollow teardrop + hollow center ring + ping signal arcs) to match the SIPPICOM brand outline style of the other tool icons, instead of the previous bold solid-filled pin.
   - No source diff detected (rebuild only).
 
+## 2026-09-16 16:21:30
+- **RootOfTrust** v1.0.18 - Redesign the other 4 tool icons in the PingMeMaybe line-art style (higher quality, smooth beziers/round strokes): RootOfTrust = shield + checkmark, CtrlAltPass = padlock, PaperJamZero = desktop printer, and AutoDeploy changed from a key to a MONITOR + install/download arrow so it clearly reads as 'deploy software to a PC'. All the tool icons now share one consistent orange outline style.
+  - No source diff detected (rebuild only).
+- **PingMeMaybe** v1.0.37 - Redesign the other 4 tool icons in the PingMeMaybe line-art style (higher quality, smooth beziers/round strokes): RootOfTrust = shield + checkmark, CtrlAltPass = padlock, PaperJamZero = desktop printer, and AutoDeploy changed from a key to a MONITOR + install/download arrow so it clearly reads as 'deploy software to a PC'. All the tool icons now share one consistent orange outline style.
+  - No source diff detected (rebuild only).
+- **CtrlAltPass** v1.0.22 - Redesign the other 4 tool icons in the PingMeMaybe line-art style (higher quality, smooth beziers/round strokes): RootOfTrust = shield + checkmark, CtrlAltPass = padlock, PaperJamZero = desktop printer, and AutoDeploy changed from a key to a MONITOR + install/download arrow so it clearly reads as 'deploy software to a PC'. All the tool icons now share one consistent orange outline style.
+  - No source diff detected (rebuild only).
+- **PaperJamZero** v1.0.20 - Redesign the other 4 tool icons in the PingMeMaybe line-art style (higher quality, smooth beziers/round strokes): RootOfTrust = shield + checkmark, CtrlAltPass = padlock, PaperJamZero = desktop printer, and AutoDeploy changed from a key to a MONITOR + install/download arrow so it clearly reads as 'deploy software to a PC'. All the tool icons now share one consistent orange outline style.
+  - No source diff detected (rebuild only).
+- **TurnKey** v1.0.19 - Redesign the other 4 tool icons in the PingMeMaybe line-art style (higher quality, smooth beziers/round strokes): RootOfTrust = shield + checkmark, CtrlAltPass = padlock, PaperJamZero = desktop printer, and AutoDeploy changed from a key to a MONITOR + install/download arrow so it clearly reads as 'deploy software to a PC'. All the tool icons now share one consistent orange outline style.
+  - No source diff detected (rebuild only).
+
