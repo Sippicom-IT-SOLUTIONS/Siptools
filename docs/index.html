@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Siptools — SIPPICOM IT-Solutions</title>
+<meta name="description" content="Siptools by SIPPICOM IT-Solutions: a multi-threaded administrative and deployment suite for Windows. Six zero-dependency tools, runnable in memory via a single PowerShell one-liner or as standalone 64-bit binaries." />
+<meta name="theme-color" content="#1e1e1e" />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="stylesheet" href="styles.css" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Siptools — SIPPICOM IT-Solutions" />
+<meta property="og:description" content="A multi-threaded administrative and deployment suite for Windows. Run in memory via one PowerShell line, or as standalone 64-bit executables." />
+<meta property="og:image" content="assets/sippicom-logo.png" />
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <img src="assets/sippicom-logo.png" alt="SIPPICOM IT-Solutions" />
+      <div class="sep"></div>
+      <div class="product">Sip<span>tools</span></div>
+    </div>
+    <nav class="nav">
+      <a class="navlink" href="#tools">Tools</a>
+      <a class="navlink" href="#install">Install</a>
+      <a class="navlink" href="#binaries">Binaries</a>
+      <a class="gh" href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.57.1.78-.25.78-.55v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        GitHub
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" style="border-top:none;">
+  <div class="wrap">
+    <span class="eyebrow">⚡ Windows x64 · PowerShell &amp; standalone .exe</span>
+    <h1>The SIPPICOM<br /><span>administrative toolkit</span> for Windows.</h1>
+    <p class="lede">Siptools is a modern, multi-threaded administration &amp; deployment suite for Windows workstations and servers. Every utility runs directly in memory from a single PowerShell line — or as a zero-dependency 64-bit binary.</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#install">Get started</a>
+      <a class="btn btn-ghost" href="#tools">Browse the 6 tools</a>
+    </div>
+
+    <div style="margin-top:36px; max-width:760px;">
+      <div class="cmd">
+        <span class="prompt">PS&gt;</span>
+        <code id="hub-cmd">irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/main.ps1 | iex</code>
+        <button class="copy-btn" data-copy="#hub-cmd">Copy</button>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><div class="n">6</div><div class="l">Specialised tools</div></div>
+      <div class="stat"><div class="n">256</div><div class="l">Parallel scan threads</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">Runtime dependencies</div></div>
+      <div class="stat"><div class="n">x64</div><div class="l">Native Windows binaries</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Hub ===== -->
+<section class="hub" id="hub">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Unified Cloud Hub</div>
+      <h2>One command. The whole suite.</h2>
+      <p>Launch the interactive SIPPICOM Cloud Suite menu in any Windows PowerShell window and pick a tool from the list — no download, no install, nothing left behind on disk.</p>
+    </div>
+    <div class="cmd">
+      <span class="prompt">PS&gt;</span>
+      <code id="hub-cmd2">irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/main.ps1 | iex</code>
+      <button class="copy-btn" data-copy="#hub-cmd2">Copy</button>
+    </div>
+    <div class="callout">
+      <span aria-hidden="true">💡</span>
+      <div><b>Prefer offline?</b> Every tool is also shipped as a signed, obfuscated standalone <code class="inline">.exe</code> with an embedded icon and zero runtime dependencies — ideal for locked-down environments where script execution is blocked. See <a href="#binaries">Standalone binaries</a>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Tools ===== -->
+<section id="tools">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">The toolkit</div>
+      <h2>Six tools, one suite</h2>
+      <p>Each tool is purpose-built, fully self-contained, and runnable on its own. Copy its one-liner, or grab the binary.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <!-- RootOfTrust -->
+      <article class="tool-card">
+        <div class="top">
+          <div class="ico"><img src="assets/icons/rootoftrust.ico" alt="" /></div>
+          <div>
+            <h3>RootOfTrust</h3>
+            <div class="tagline">RDP Security &amp; Code Signing</div>
+          </div>
+        </div>
+        <p class="desc">Certificate authority, PKI trust and <code class="inline">.rdp</code> code-signing suite — stop the "unknown publisher" RDP warnings for good.</p>
+        <ul class="features">
+          <li>Generates SHA-256 self-signed code-signing certificates</li>
+          <li>Installs into Trusted Root &amp; Trusted Publisher stores</li>
+          <li>Signs <code class="inline">.rdp</code> files via native <code class="inline">rdpsign.exe</code></li>
+          <li>Built-in certificate manager to review &amp; revoke</li>
+        </ul>
+        <div class="cmd">
+          <span class="prompt">PS&gt;</span>
+          <code id="c-root">irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/RootOfTrust/RootOfTrust.ps1 | iex</code>
+          <button class="copy-btn" data-copy="#c-root">Copy</button>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/bin/RootOfTrust.exe">⬇ Download .exe</a>
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/blob/main/tools/RootOfTrust/RootOfTrust.ps1" target="_blank" rel="noopener">View source</a>
+        </div>
+      </article>
+
+      <!-- PaperJamZero -->
+      <article class="tool-card">
+        <div class="top">
+          <div class="ico"><img src="assets/icons/paperjamzero.ico" alt="" /></div>
+          <div>
+            <h3>PaperJamZero</h3>
+            <div class="tagline">Spooler &amp; Network Print Hub</div>
+          </div>
+        </div>
+        <p class="desc">Multi-threaded print-spooler medic and network print hub — clears jams, resets queues and migrates printers.</p>
+        <ul class="features">
+          <li>Restarts &amp; diagnoses the Windows Print Spooler</li>
+          <li>Purges stuck <code class="inline">.SPL</code> / <code class="inline">.SHD</code> spool files</li>
+          <li>Resets offline queues &amp; installs TCP/IP printer ports</li>
+          <li>Full printer backup/restore via <code class="inline">PrintBrm.exe</code></li>
+        </ul>
+        <div class="cmd">
+          <span class="prompt">PS&gt;</span>
+          <code id="c-paper">irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/PaperJamZero/PaperJamZero.ps1 | iex</code>
+          <button class="copy-btn" data-copy="#c-paper">Copy</button>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/bin/PaperJamZero.exe">⬇ Download .exe</a>
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/blob/main/tools/PaperJamZero/PaperJamZero.ps1" target="_blank" rel="noopener">View source</a>
+        </div>
+      </article>
+
+      <!-- CtrlAltPass -->
+      <article class="tool-card">
+        <div class="top">
+          <div class="ico"><img src="assets/icons/ctrlaltpass.ico" alt="" /></div>
+          <div>
+            <h3>CtrlAltPass</h3>
+            <div class="tagline">Enterprise Password Generator</div>
+          </div>
+        </div>
+        <p class="desc">Cryptographically secure credential generator with a diceware word-book engine and a live strength estimator.</p>
+        <ul class="features">
+          <li>High-entropy passwords via <code class="inline">RNGCryptoServiceProvider</code></li>
+          <li>Diceware word-book &amp; numeric PIN modes</li>
+          <li>Built-in regex tester (collapsible)</li>
+          <li>Post-quantum &amp; GPU crack-time estimator · one-click copy</li>
+        </ul>
+        <div class="cmd">
+          <span class="prompt">PS&gt;</span>
+          <code id="c-pass">irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/CtrlAltPass/CtrlAltPass.ps1 | iex</code>
+          <button class="copy-btn" data-copy="#c-pass">Copy</button>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/bin/CtrlAltPass.exe">⬇ Download .exe</a>
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/blob/main/tools/CtrlAltPass/CtrlAltPass.ps1" target="_blank" rel="noopener">View source</a>
+        </div>
+      </article>
+
+      <!-- PingMeMaybe -->
+      <article class="tool-card">
+        <div class="top">
+          <div class="ico"><img src="assets/icons/pingmemaybe.ico" alt="" /></div>
+          <div>
+            <h3>PingMeMaybe</h3>
+            <div class="tagline">Network Diagnostics &amp; Port Scanner</div>
+          </div>
+        </div>
+        <p class="desc">A full network diagnostics console: subnet scanner, DNS/DHCP fingerprinting, SSL inspector and a live topology map.</p>
+        <ul class="features">
+          <li>Scans entire <code class="inline">/24</code> subnets across 256 threads</li>
+          <li>DNS/DHCP origin fingerprinting (DC vs. router vs. public)</li>
+          <li>SSL/TLS certificate &amp; cipher inspector with expiry warnings</li>
+          <li>WAN IP + geo, DNS benchmark, Wi-Fi sniffer &amp; speedtest</li>
+        </ul>
+        <div class="cmd">
+          <span class="prompt">PS&gt;</span>
+          <code id="c-ping">irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/PingMeMaybe/PingMeMaybe.ps1 | iex</code>
+          <button class="copy-btn" data-copy="#c-ping">Copy</button>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/bin/PingMeMaybe.exe">⬇ Download .exe</a>
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/blob/main/tools/PingMeMaybe/PingMeMaybe.ps1" target="_blank" rel="noopener">View source</a>
+        </div>
+      </article>
+
+      <!-- TurnKeyPC -->
+      <article class="tool-card">
+        <div class="top">
+          <div class="ico"><img src="assets/icons/turnkey.ico" alt="" /></div>
+          <div>
+            <h3>TurnKeyPC <span class="tag gui">Interactive</span></h3>
+            <div class="tagline">Workstation Setup Deployer</div>
+          </div>
+        </div>
+        <p class="desc">Parallel workstation provisioning with a real-time GUI — installs the whole standard business stack at once.</p>
+        <ul class="features">
+          <li>Microsoft 365 Apps (German locale, Office Deployment Tool)</li>
+          <li>Adobe Acrobat Reader — upsell/subscription nags suppressed</li>
+          <li>VLC Media Player &amp; 7-Zip (x64)</li>
+          <li>Live progress bars &amp; per-task status log</li>
+        </ul>
+        <div class="cmd">
+          <span class="prompt">PS&gt;</span>
+          <code id="c-tkpc">irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/TurnKeyPC/TurnKeyPC.ps1 | iex</code>
+          <button class="copy-btn" data-copy="#c-tkpc">Copy</button>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/bin/TurnKeyPC.exe">⬇ Download .exe</a>
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/blob/main/tools/TurnKeyPC/TurnKeyPC.ps1" target="_blank" rel="noopener">View source</a>
+        </div>
+      </article>
+
+      <!-- TurnKeyFast -->
+      <article class="tool-card">
+        <div class="top">
+          <div class="ico"><img src="assets/icons/turnkey.ico" alt="" /></div>
+          <div>
+            <h3>TurnKeyFast <span class="tag silent">Silent</span></h3>
+            <div class="tagline">Unattended Deployer</div>
+          </div>
+        </div>
+        <p class="desc">The same deployment engine as TurnKeyPC, run fully unattended — zero prompts, perfect for imaging and bulk roll-outs.</p>
+        <ul class="features">
+          <li>Silent, unattended workstation provisioning</li>
+          <li>Identical software stack to TurnKeyPC</li>
+          <li>No GUI, no prompts — ideal for scripts &amp; MDM</li>
+          <li>Exit codes for pipeline integration</li>
+        </ul>
+        <div class="cmd">
+          <span class="prompt">PS&gt;</span>
+          <code id="c-tkfast">irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/TurnKeyFast/TurnKeyFast.ps1 | iex</code>
+          <button class="copy-btn" data-copy="#c-tkfast">Copy</button>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/bin/TurnKeyFast.exe">⬇ Download .exe</a>
+          <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/blob/main/tools/TurnKeyFast/TurnKeyFast.ps1" target="_blank" rel="noopener">View source</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Install ===== -->
+<section class="install" id="install">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Getting started</div>
+      <h2>Up and running in seconds</h2>
+      <p>No installer, no setup wizard. Open PowerShell and run a single line — or download the binary for offline use.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Open PowerShell</h3>
+        <p>Launch Windows PowerShell or Terminal. Run <b>as Administrator</b> for tools that change system state (RootOfTrust, PaperJamZero, TurnKey).</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Run the one-liner</h3>
+        <p>Paste the hub command — <code class="inline">irm … | iex</code> — to open the interactive menu, or use any individual tool's one-liner from the <a href="#tools">cards above</a>.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Pick your tool</h3>
+        <p>Select a tool from the menu and go. Nothing is installed or persisted — the code is fetched and executed straight in memory.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span aria-hidden="true">🔒</span>
+      <div><b>Internal / proprietary.</b> Siptools is built and maintained by SIPPICOM IT-Solutions for its own and its customers' environments. Review the source on GitHub before running anything with <code class="inline">irm … | iex</code> in a production environment.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Binaries ===== -->
+<section id="binaries">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Offline use</div>
+      <h2>Standalone binaries</h2>
+      <p>For locked-down or air-gapped machines where script execution is restricted, each tool ships as a pre-compiled, obfuscated 64-bit native executable with an embedded icon and no runtime dependencies.</p>
+    </div>
+    <div class="hero-actions" style="margin-top:0;">
+      <a class="btn btn-primary" href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/tree/main/bin" target="_blank" rel="noopener">Browse all binaries on GitHub</a>
+      <a class="btn btn-ghost" href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools" target="_blank" rel="noopener">View the repository</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <img src="assets/sippicom-logo.png" alt="SIPPICOM IT-Solutions" />
+      <div class="meta" style="margin-top:10px;">Maintainer: <b>Aya Gürster</b> · Windows x64 · PowerShell 5.1 / 7+</div>
+    </div>
+    <div class="meta" style="text-align:right;">
+      <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools" target="_blank" rel="noopener">github.com/Sippicom-IT-SOLUTIONS/Siptools</a><br />
+      © 2026 SIPPICOM IT-Solutions. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll(".copy-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var el = document.querySelector(btn.getAttribute("data-copy"));
+      if (!el) return;
+      var text = el.innerText.trim();
+      var done = function () {
+        var old = btn.textContent;
+        btn.textContent = "Copied ✓";
+        btn.classList.add("copied");
+        setTimeout(function () { btn.textContent = old; btn.classList.remove("copied"); }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function () { fallback(text, done); });
+      } else {
+        fallback(text, done);
+      }
+    });
+  });
+  function fallback(text, done) {
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      document.execCommand("copy"); document.body.removeChild(ta); done();
+    } catch (e) { /* no-op */ }
+  }
+</script>
+
+</body>
+</html>
