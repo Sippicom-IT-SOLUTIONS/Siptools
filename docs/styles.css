@@ -250,6 +250,10 @@ section { padding: 72px 0; border-top: 1px solid var(--border); }
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: var(--brand); }
 
+/* Programm-Symbol als Foto: dunkle Kachel aus dem Bild ausschneiden */
+.ico.ico-photo { position: relative; overflow: hidden; padding: 0; border-radius: 17%; background: #1c1c1e; }
+.ico.ico-photo img { position: absolute; left: -24.6%; top: -24.6%; width: 149.2%; height: 149.2%; max-width: none; object-fit: fill; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .wide-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
