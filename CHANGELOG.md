@@ -5,7 +5,7 @@ All notable changes to the SIPPICOM Cloud Suite are recorded here. Entries from
 private source repo; everything before that was reconstructed from this
 repo's commit history when the changelog was introduced.
 
-## 2026-08-21 — Source split, repo rename, deploy pipeline
+## 2026-08-21: Source split, repo rename, deploy pipeline
 
 - Split the local tool-source workspace out into its own private repository,
   `Sippicom-IT-SOLUTIONS/Siptools-Raw`, so `.cs` source can no longer end up
@@ -24,7 +24,7 @@ repo's commit history when the changelog was introduced.
   where CtrlAltPass, PaperJamZero, TurnKeyPC, and TurnKeyFast had source
   checked in but no active build step.
 
-## 2026-08-19 — Org migration, tool rebrand, PingMeMaybe
+## 2026-08-19: Org migration, tool rebrand, PingMeMaybe
 
 - Migrated the repository to the Sippicom-IT-SOLUTIONS GitHub organization
   and updated all cloud endpoints; redid the SIPPICOM logo with proper
@@ -44,9 +44,9 @@ repo's commit history when the changelog was introduced.
   table). Note: the repeated commit message on many of these ("Refactor
   PingMeMaybe with clean column-header sorting & sanitize repository") was a
   hardcoded default in the local deploy script, not a per-commit description
-  of what actually changed — the new pipeline generates accurate messages.
+  of what actually changed. The new pipeline generates accurate messages.
 
-## 2026-08-14 — Initial public release
+## 2026-08-14: Initial public release
 
 - Initial commit of the SIPPICOM Cloud Tools suite: RootOfTrust (as
   `CertRDP`), TurnKeyPC/TurnKeyFast (as `AutoDeploy`/`AutoDeployFast`),
@@ -59,38 +59,38 @@ repo's commit history when the changelog was introduced.
   execution: removed `param()` blocks (which broke piped `iex` execution)
   and re-encoded every script as UTF-8 without a BOM.
 - Added and iteratively refined the SIPPICOM ASCII/block-character logo
-  banner in `main.ps1` — typography, centering, Floyd-Steinberg dithering,
+  banner in `main.ps1`: typography, centering, Floyd-Steinberg dithering,
   TrueColor orange, and codepage-safe rendering.
 - Fixed a raw string formatting bug in CtrlAltPass and updated the README
   with live GitHub URLs.
 
-## 2026-08-21 13:52:55 — Security & correctness fixes across all 5 tools
+## 2026-08-21 13:52:55: Security & correctness fixes across all 5 tools
 
-- **RootOfTrust** v1.0.1 — Hardened certificate/RDP-signing commands against
+- **RootOfTrust** v1.0.1: Hardened certificate/RDP-signing commands against
   malformed input, fixed leftover trust-store entries not being fully
   cleaned up when a certificate is deleted, and fixed a bug where signing
   could reuse the wrong certificate for a similarly-named host.
-- **PaperJamZero** v1.0.1 — Hardened printer add/remove commands against
+- **PaperJamZero** v1.0.1: Hardened printer add/remove commands against
   malformed input, fixed the delete-printer action always reporting success
   even when it failed, and the app no longer keeps running fully unelevated
   if administrator rights are declined.
-- **PingMeMaybe** v1.0.1 — Fixed a bug where scanning up to `255.255.255.255`
+- **PingMeMaybe** v1.0.1: Fixed a bug where scanning up to `255.255.255.255`
   could freeze the app, fixed a crash when tracing a route from the
   right-click menu, closed a stored-content risk in the HTML export, and
   fixed a resource leak in command execution.
-- **TurnKeyPC** / **TurnKeyFast** v1.0.1 — Fixed a bug where a failed
+- **TurnKeyPC** / **TurnKeyFast** v1.0.1: Fixed a bug where a failed
   software install (e.g. no network, package unavailable) could be logged
   as successful; hardened long-running install commands against a rare
   hang.
-- **CtrlAltPass** v1.0.1 — Fixed the custom-pattern generator producing a
+- **CtrlAltPass** v1.0.1: Fixed the custom-pattern generator producing a
   stray character in grouped/quantified patterns, fixed negated character
   classes (`[^0-9]`) not working correctly, improved randomness distribution,
   and fixed a validation badge that could show "valid" incorrectly for
   case-sensitive patterns.
 
-## 2026-08-21 14:13:23 — PingMeMaybe topology map improvements
+## 2026-08-21 14:13:23: PingMeMaybe topology map improvements
 
-- **PingMeMaybe** v1.0.2 — Traced routes to a device on a different network
+- **PingMeMaybe** v1.0.2: Traced routes to a device on a different network
   or to an internet host (e.g. `google.com`) now draw correctly through the
   gateway/firewall instead of appearing to jump straight from the switch;
   devices on a different subnet are now visually grouped separately from
@@ -99,27 +99,27 @@ repo's commit history when the changelog was introduced.
   Remote Networks" filter, and fixed the category filter dropdown not
   actually filtering anything.
 
-## 2026-08-21 14:34:48 — PingMeMaybe topology map: pan, layout shapes, full hop chain
+## 2026-08-21 14:34:48: PingMeMaybe topology map: pan, layout shapes, full hop chain
 
-- **PingMeMaybe** v1.0.3 — You can now click and drag the topology map to move
+- **PingMeMaybe** v1.0.3: You can now click and drag the topology map to move
   it around (plus a "Reset View" button), instead of only scrolling
   vertically. Added a "Map Shape" selector to display the same devices as a
   Star, Bus, Line, Ring, Mesh, Fully Meshed, or Tree diagram, alongside the
   original real-routing view. Tracing a route now shows every hop the
-  traffic actually took along the way — not just the final destination —
+  traffic actually took along the way (not just the final destination),
   with hostnames resolved where available.
 
-## 2026-08-21 14:45:28 — PingMeMaybe topology map fixes
+## 2026-08-21 14:45:28: PingMeMaybe topology map fixes
 
-- **PingMeMaybe** v1.0.4 — Fixed node labels/IP text staying frozen in place
+- **PingMeMaybe** v1.0.4: Fixed node labels/IP text staying frozen in place
   while you dragged their boxes around. Devices on different networks are
   now grouped and labeled by their actual subnet instead of one generic
   "remote" bucket. Dragging the map around now feels like a large open
   canvas instead of being limited to roughly the window's own size.
 
-## 2026-08-21 15:05:15 — PingMeMaybe topology map: enterprise-style redesign
+## 2026-08-21 15:05:15: PingMeMaybe topology map: enterprise-style redesign
 
-- **PingMeMaybe** v1.0.5 — The map now lays out like a standard network
+- **PingMeMaybe** v1.0.5: The map now lays out like a standard network
   diagram: your PC, switch, and gateway sit in a straight line (the "trunk"),
   with everything else branching off to the side instead of sitting in the
   way. Connection lines now turn at clean right angles around other devices
@@ -127,77 +127,77 @@ repo's commit history when the changelog was introduced.
   on the traced path fades out and the actual route glows, so the path you
   care about stands out immediately.
 
-## 2026-08-21 15:17:41 — PingMeMaybe topology map: zoom, no more overlapping labels
+## 2026-08-21 15:17:41: PingMeMaybe topology map: zoom, no more overlapping labels
 
-- **PingMeMaybe** v1.0.6 — You can now zoom the topology map in and out with
+- **PingMeMaybe** v1.0.6: You can now zoom the topology map in and out with
   the scroll wheel (drag still pans), centered on wherever your cursor is.
   Fixed network labels overlapping each other when several different
   subnets were shown side by side. Fixed multiple devices connecting to the
   switch/gateway from the same spot looking like a single line instead of
   one line per device.
 
-## 2026-08-21 15:56:08 — PingMeMaybe: multi-network map redesign
+## 2026-08-21 15:56:08: PingMeMaybe: multi-network map redesign
 
-- **PingMeMaybe** v1.0.7 — Every network is now drawn as its own star: your
+- **PingMeMaybe** v1.0.7: Every network is now drawn as its own star: your
   local devices fan out around your switch, and each other network the app
   discovers (from a scan or from a traced route) gets its own star too,
   centered on a best-effort guess at that network's gateway/firewall. The
-  "Map Shape" picker is gone — this replaces it as the one correct view.
+  "Map Shape" picker is gone; this replaces it as the one correct view.
   Traced routes now show an explicit "Internet" box where traffic leaves
   your network, or flag it as a VPN tunnel if it looks like one instead.
   Also added an option to manually drag individual devices to reposition
   them on the map.
 
-## 2026-08-21 16:10:23 — PingMeMaybe: fixes from your screenshot
+## 2026-08-21 16:10:23: PingMeMaybe: fixes from your screenshot
 
-- **PingMeMaybe** v1.0.8 — Networks now actually render as a real star (a
+- **PingMeMaybe** v1.0.8: Networks now actually render as a real star (a
   full circle around the hub) instead of a lopsided fan that looked
   scattered. Fixed your local network's box not including the switch itself.
   Fixed tracing to a device inside an already-known network showing the
   path stopping at your gateway even though the device further along was
-  correctly found — the glowing path now runs all the way through.
+  correctly found. The glowing path now runs all the way through.
 
-## 2026-08-21 16:22:03 — PingMeMaybe: gateway placement and cleaner connectors
+## 2026-08-21 16:22:03: PingMeMaybe: gateway placement and cleaner connectors
 
-- **PingMeMaybe** v1.0.9 — Your gateway/firewall now shows up inside your
+- **PingMeMaybe** v1.0.9: Your gateway/firewall now shows up inside your
   local network's box, where it belongs. Fixed connector lines between
   networks visually cutting through a network's own devices before reaching
-  its gateway — a network's devices are now positioned entirely on the far
+  its gateway. A network's devices are now positioned entirely on the far
   side of its gateway from the connecting line, so the line only ever
   touches the gateway itself.
 
-## 2026-08-21 16:44:06 — PingMeMaybe: fixed overlapping star nodes
+## 2026-08-21 16:44:06: PingMeMaybe: fixed overlapping star nodes
 
-- **PingMeMaybe** v1.0.10 — Devices in a network's star were positioned
+- **PingMeMaybe** v1.0.10: Devices in a network's star were positioned
   closer together than the boxes are wide, so they were guaranteed to
   overlap regardless of how many there were. Spaced them out properly.
 
-## 2026-08-25 13:13:14 — CtrlAltPass: bigger, German wordbook
+## 2026-08-25 13:13:14: CtrlAltPass: bigger, German wordbook
 
-- **CtrlAltPass** v1.0.2 — The "Wordbook Dictionary Engine" password mode
-  now draws from 238 German words (up from 60 English ones) — nature,
-  animals, sky, myth, and more — giving noticeably stronger word-based
+- **CtrlAltPass** v1.0.2: The "Wordbook Dictionary Engine" password mode
+  now draws from 238 German words (up from 60 English ones): nature,
+  animals, sky, myth, and more, giving noticeably stronger word-based
   passwords. Spelled without umlauts so every generated password is still
   easy to type on any keyboard.
 
-## 2026-08-25 13:43:45 — PingMeMaybe: star margins and hub-stacking fix
+## 2026-08-25 13:43:45: PingMeMaybe: star margins and hub-stacking fix
 
-- **PingMeMaybe** v1.0.11 — Devices in a network's star could land stacked
+- **PingMeMaybe** v1.0.11: Devices in a network's star could land stacked
   directly on top of the switch/gateway they orbit, and a network with a lot
   of devices could overlap the network drawn next to it. Both are fixed:
   every star now keeps a solid gap between its hub and the nearest device,
   and wide stars no longer crowd into their neighbor's space.
 
-## 2026-08-26 11:38:12 — Build pipeline: binary protection
+## 2026-08-26 11:38:12: Build pipeline: binary protection
 
 - Every binary in this suite is now obfuscated as part of the build, to
   protect the code behind these tools from casual reverse-engineering. No
   tool's features or behavior changed.
 
-## 2026-08-26 12:09:05 — Build pipeline: obfuscation fix
+## 2026-08-26 12:09:05: Build pipeline: obfuscation fix
 
-- The previous build's binary protection didn't actually protect anything —
-  fixed, and the build now automatically double-checks the protection took
+- The previous build's binary protection didn't actually protect anything.
+  Fixed, and the build now automatically double-checks the protection took
   effect on every binary before it can ship. No tool's features or behavior
   changed.
 
@@ -406,3 +406,13 @@ repo's commit history when the changelog was introduced.
 - **PingMeMaybe** v1.0.39 - PingMeMaybe: fix slow startup. DiscoverEdgeAndVpnSubnets ran an Active Directory computer enumeration (up to 3000 hosts, a DNS lookup each) plus a route.exe process synchronously while building the scanner tab - blocking the window from appearing (an LDAP bind alone stalls for seconds, worse on a domain). Now startup lists only the fast local-adapter subnets; the slow AD/routing discovery runs on a background thread after the window is shown and appends its results to the dropdown when ready (full discovery still runs at actual scan time). Measured ~1000ms to ~400ms to window here, more on a domain machine.
   - PingMeMaybe.cs (+47/-3 lines) - near: GetHostCpuDescription, BuildView1_SubnetScanner, GenerateIpRange
 
+## 2026-11-05
+- Landing page, README and hub menu: text now matches what the tools actually do.
+  - The one-liners download the .exe to %TEMP% and start it; the page no longer claims they run in memory and leave nothing on disk.
+  - Removed claims the binaries did not back up: "signed" (they are not code-signed), "native" and "zero runtime dependencies" (they are .NET programs on the .NET Framework that ships with Windows), and the stats row.
+  - PingMeMaybe no longer advertises the SSL/TLS inspector, which was removed in v1.0.29; it now lists the topology map, route tracing and exports instead.
+  - CtrlAltPass is described from its changelog: random passwords, the German word mode, custom patterns, PINs.
+  - TurnKeyPC and TurnKeyFast share one card; Office is listed as Microsoft 365 Apps for Enterprise, as installed since TurnKey v1.0.15.
+- Landing page: a Menu button on phones (the nav links used to disappear), 44px tap targets, a <main> landmark, visible focus, a skip link, copy buttons with their own names and a visible error state, image sizes, and no motion when the system asks for reduced motion. Gray text on the tool cards now meets WCAG AA contrast.
+- main.ps1: "Download All" saves to the PowerShell folder you are in and reports how many downloads failed instead of always saying all succeeded.
+- Replaced the em dashes in this changelog.
