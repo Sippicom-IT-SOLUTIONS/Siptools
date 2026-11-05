@@ -33,22 +33,22 @@ function Show-Header {
     Write-Host ''
     Write-Host "                 $gold--== SIPPICOM IT-SOLUTIONS ==--$reset"
     Write-Host '==================================================================' -ForegroundColor DarkYellow
-    Write-Host '       SIPPICOM IT-SOLUTIONS - CLOUD SUITE & DEPLOYMENT HUB' -ForegroundColor Yellow
-    Write-Host '             Live GitHub Execution Engine (irm | iex)' -ForegroundColor Gray
+    Write-Host '               SIPPICOM IT-SOLUTIONS - SIPTOOLS HUB' -ForegroundColor Yellow
+    Write-Host '     Downloads the selected tool from GitHub and starts it' -ForegroundColor Gray
     Write-Host '==================================================================' -ForegroundColor DarkYellow
     Write-Host ''
 }
 
 function Launch-Tool ($ToolName, $ExeName) {
     Write-Host ''
-    Write-Host ('--> Launching ' + $ToolName + ' from Cloud...') -ForegroundColor Cyan
+    Write-Host ('--> Downloading ' + $ToolName + ' to %TEMP% and starting it...') -ForegroundColor Cyan
     $exeUrl = $BASE_URL + '/bin/' + $ExeName
     $targetPath = Join-Path $env:TEMP $ExeName
     try {
         $wc = New-Object System.Net.WebClient
         $wc.DownloadFile($exeUrl, $targetPath)
         Start-Process -FilePath $targetPath
-        Write-Host ('[OK] ' + $ToolName + ' launched successfully!') -ForegroundColor Green
+        Write-Host ('[OK] ' + $ToolName + ' started.') -ForegroundColor Green
     } catch {
         Write-Host ('[Error] Could not fetch ' + $ExeName) -ForegroundColor Yellow
     }
@@ -56,15 +56,15 @@ function Launch-Tool ($ToolName, $ExeName) {
 
 do {
     Show-Header
-    Write-Host 'Select a SIPPICOM Cloud Tool:' -ForegroundColor Cyan
+    Write-Host 'Select a tool:' -ForegroundColor Cyan
     Write-Host ''
-    Write-Host '  [1] > RootOfTrust    - RDP Code Signing & PKI Trust Suite' -ForegroundColor White
-    Write-Host '  [2] > PaperJamZero   - Multi-Threaded Spooler & Network Hub' -ForegroundColor White
-    Write-Host '  [3] > TurnKeyPC      - Workstation Setup & Software Deployer' -ForegroundColor White
-    Write-Host '  [4] > TurnKeyFast    - Unattended Silent Workstation Deployer' -ForegroundColor White
-    Write-Host '  [5] > CtrlAltPass    - Enterprise Password Generator' -ForegroundColor White
-    Write-Host '  [6] > PingMeMaybe    - Network Diagnostics, Port Scanner & SSL' -ForegroundColor White
-    Write-Host '  [7] > Download All   - Save standalone binaries locally' -ForegroundColor White
+    Write-Host '  [1] > RootOfTrust    - RDP File Signing & Certificates' -ForegroundColor White
+    Write-Host '  [2] > PaperJamZero   - Print Spooler Repair & Printer Migration' -ForegroundColor White
+    Write-Host '  [3] > TurnKeyPC      - Workstation Setup (with window)' -ForegroundColor White
+    Write-Host '  [4] > TurnKeyFast    - Workstation Setup (no prompts)' -ForegroundColor White
+    Write-Host '  [5] > CtrlAltPass    - Password & PIN Generator' -ForegroundColor White
+    Write-Host '  [6] > PingMeMaybe    - Network Scanner & Topology Map' -ForegroundColor White
+    Write-Host '  [7] > Download All   - Save all six .exe files to this folder' -ForegroundColor White
     Write-Host '  [Q] > Exit' -ForegroundColor Red
     Write-Host ''
     Write-Host 'Enter selection [1-7, Q]: ' -NoNewline -ForegroundColor Yellow
@@ -80,25 +80,32 @@ do {
         '6' { Launch-Tool 'PingMeMaybe' 'PingMeMaybe.exe'; Start-Sleep -Seconds 1 }
         '7' {
             Write-Host ''
-            Write-Host '--> Downloading standalone binaries to current directory...' -ForegroundColor Cyan
+            Write-Host '--> Downloading all six .exe files to the current folder...' -ForegroundColor Cyan
             $bins = @('RootOfTrust.exe', 'PaperJamZero.exe', 'TurnKeyPC.exe', 'TurnKeyFast.exe', 'CtrlAltPass.exe', 'PingMeMaybe.exe')
             $wc = New-Object System.Net.WebClient
+            $failed = 0
             foreach ($b in $bins) {
                 Write-Host ('    Downloading ' + $b + ' ... ') -NoNewline
                 try {
-                    $wc.DownloadFile($BASE_URL + '/bin/' + $b, '.\' + $b)
+                    $wc.DownloadFile($BASE_URL + '/bin/' + $b, (Join-Path (Get-Location).Path $b))
                     Write-Host 'OK' -ForegroundColor Green
                 } catch {
                     Write-Host 'Failed' -ForegroundColor Red
+                    $failed++
                 }
             }
             Write-Host ''
-            Write-Host 'All binaries downloaded. Press any key to continue...'
+            if ($failed -eq 0) {
+                Write-Host ('All ' + $bins.Count + ' files saved to ' + (Get-Location).Path + '.')
+            } else {
+                Write-Host ([string]$failed + ' of ' + $bins.Count + ' downloads failed. Check the network and try again.') -ForegroundColor Yellow
+            }
+            Write-Host 'Press any key to continue...'
             [void][Console]::ReadKey($true)
         }
         'Q' {
             Write-Host ''
-            Write-Host 'Exiting SIPPICOM Cloud Hub. Have a great day!' -ForegroundColor Yellow
+            Write-Host 'Siptools hub closed.' -ForegroundColor Yellow
             break
         }
     }
