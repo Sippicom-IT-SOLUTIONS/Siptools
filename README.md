@@ -146,6 +146,17 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/
 
 ---
 
+### 6. 🩺 Diagnosezentrum (`Sippicom_Diagnosezentrum.zip` — download only)
+**Graphical Workstation Diagnostics & Repair Center (PowerShell 5.1, German interface)**
+- Tile grid with 8 categories, search and one-click profiles (Outlook problem, slow internet, slow PC, sign-in, printer).
+- Checks for system, hardware, updates, security, network, Wi-Fi, VPN, proxy, Microsoft 365, Outlook/Teams, printers and certificates.
+- Repair tools with confirmation (SFC, DISM, update reset, DNS/spooler/DHCP, OneAuth, OST rebuild) and backups of Wi-Fi profiles, browser favorites, OneAuth and Outlook data.
+- Reports as TXT and HTML (saved to `C:\SippicomInstall\diagnose`) with comparison to the last run, plus a plain-language customer report.
+
+Not a one-liner: the tool needs its `assets` folder next to the script. Download [`docs/downloads/Sippicom_Diagnosezentrum.zip`](./docs/downloads/Sippicom_Diagnosezentrum.zip) (or via <https://ncscript.xyz/Siptools/#diagnosezentrum>), extract all files into one folder and start `Sippicom_Diagnosezentrum.bat` (as administrator for repairs).
+
+---
+
 ## 📂 Repository File Structure
 
 ```text
@@ -167,6 +178,9 @@ irm https://raw.githubusercontent.com/Sippicom-IT-SOLUTIONS/Siptools/main/tools/
 │   │   └── CtrlAltPass.ps1    <-- Cloud Credential Generator
 │   └── PingMeMaybe/
 │       └── PingMeMaybe.ps1    <-- Network Diagnostics & Port Scanner
+├── docs/
+│   └── downloads/
+│       └── Sippicom_Diagnosezentrum.zip <-- Diagnosezentrum (ZIP download)
 └── bin/                       <-- Compiled 64-bit Standalone Executables
     ├── RootOfTrust.exe
     ├── PaperJamZero.exe

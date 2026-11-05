@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Siptools — SIPPICOM IT-Solutions</title>
-<meta name="description" content="Siptools by SIPPICOM IT-Solutions: a multi-threaded administrative and deployment suite for Windows. Six zero-dependency tools, runnable in memory via a single PowerShell one-liner or as standalone 64-bit binaries." />
+<meta name="description" content="Siptools by SIPPICOM IT-Solutions: a multi-threaded administrative and deployment suite for Windows. Six zero-dependency tools, runnable in memory via a single PowerShell one-liner or as standalone 64-bit binaries, plus the Diagnosezentrum as a ZIP download." />
 <meta name="theme-color" content="#1e1e1e" />
 <link rel="icon" href="favicon.ico" sizes="any" />
 <link rel="stylesheet" href="styles.css" />
@@ -27,6 +27,7 @@
     </div>
     <nav class="nav">
       <a class="navlink" href="#tools">Tools</a>
+      <a class="navlink" href="#diagnosezentrum">Diagnosezentrum</a>
       <a class="navlink" href="#install">Install</a>
       <a class="navlink" href="#binaries">Binaries</a>
       <a class="gh" href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools" target="_blank" rel="noopener">
@@ -46,7 +47,7 @@
 
     <div class="hero-actions">
       <a class="btn btn-primary" href="#install">Get started</a>
-      <a class="btn btn-ghost" href="#tools">Browse the 6 tools</a>
+      <a class="btn btn-ghost" href="#tools">Browse the 7 tools</a>
     </div>
 
     <div style="margin-top:36px; max-width:760px;">
@@ -58,7 +59,7 @@
     </div>
 
     <div class="hero-stats">
-      <div class="stat"><div class="n">6</div><div class="l">Specialised tools</div></div>
+      <div class="stat"><div class="n">7</div><div class="l">Specialised tools</div></div>
       <div class="stat"><div class="n">256</div><div class="l">Parallel scan threads</div></div>
       <div class="stat"><div class="n">0</div><div class="l">Runtime dependencies</div></div>
       <div class="stat"><div class="n">x64</div><div class="l">Native Windows binaries</div></div>
@@ -91,7 +92,7 @@
   <div class="wrap">
     <div class="section-head">
       <div class="kicker">The toolkit</div>
-      <h2>Six tools, one suite</h2>
+      <h2>Seven tools, one suite</h2>
       <p>Each tool is purpose-built, fully self-contained, and runnable on its own. Copy its one-liner, or grab the binary.</p>
     </div>
 
@@ -256,6 +257,37 @@
         <div class="card-links">
           <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/bin/TurnKeyFast.exe">⬇ Download .exe</a>
           <a href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/blob/main/tools/TurnKeyFast/TurnKeyFast.ps1" target="_blank" rel="noopener">View source</a>
+        </div>
+      </article>
+
+      <!-- Diagnosezentrum -->
+      <article class="tool-card wide" id="diagnosezentrum">
+        <div class="top">
+          <div class="ico"><img src="assets/icons/turnkey.ico" alt="" /></div>
+          <div>
+            <h3>Diagnosezentrum <span class="tag dl">ZIP download</span></h3>
+            <div class="tagline">Workstation Diagnostics &amp; Repair Center · v1.9.2</div>
+          </div>
+        </div>
+        <p class="desc">A graphical diagnostics and repair center for the support desk: choose checks as tiles, run them in one go and get a clear report for the ticket or the customer. Runs as a PowerShell script with a Windows interface (German) — no installation needed.</p>
+        <ul class="features">
+          <li>Tile grid with 8 categories, search and one-click profiles (Outlook problem, slow internet, slow PC, sign-in, printer)</li>
+          <li>Checks for system, hardware, updates, security, network, Wi-Fi, VPN, proxy, Microsoft 365, Outlook/Teams, printers and certificates</li>
+          <li>Repair tools that always ask first: SFC, DISM, update reset, DNS / spooler / DHCP, OneAuth, OST rebuild</li>
+          <li>Backups of Wi-Fi profiles, browser favorites, OneAuth and Outlook data</li>
+          <li>Reports as TXT and HTML with severity levels and a comparison with the last run</li>
+          <li>Plain-language customer report, optional network capture (pktmon), light and dark theme</li>
+        </ul>
+        <div class="howto-title">Quick start</div>
+        <ol class="howto">
+          <li><b>Download</b> the ZIP below. Right-click the file → <i>Properties</i> → tick <i>Unblock</i> (if shown), then extract <b>all files</b> into one folder. The <code class="inline">assets</code> folder must stay next to the script.</li>
+          <li><b>Start</b> <code class="inline">Sippicom_Diagnosezentrum.bat</code> (Windows 10/11, PowerShell 5.1). For repairs, right-click → <i>Run as administrator</i>.</li>
+          <li><b>Confirm</b> the privacy notice, optionally enter customer / ticket, pick a profile or tiles and click <i>Diagnose starten</i>.</li>
+          <li><b>Read the report</b> on the <i>Protokoll</i> tab. TXT and HTML files are saved to <code class="inline">C:\SippicomInstall\diagnose</code>.</li>
+        </ol>
+        <div class="hero-actions" style="margin-top:22px;">
+          <a class="btn btn-primary" href="downloads/Sippicom_Diagnosezentrum.zip" download>⬇ Download ZIP</a>
+          <a class="btn btn-ghost" href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/docs/downloads/Sippicom_Diagnosezentrum.zip">Direct link (GitHub)</a>
         </div>
       </article>
 

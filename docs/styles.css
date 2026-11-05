@@ -191,6 +191,19 @@ section { padding: 72px 0; border-top: 1px solid var(--border); }
 }
 .tag.gui { background: var(--okdim, rgba(52,217,160,0.14)); color: var(--ok); }
 .tag.silent { background: rgba(242,201,76,0.14); color: var(--warn); }
+.tag.dl { background: rgba(247,141,31,0.14); color: var(--brand); }
+
+/* Wide card (download-only tool such as the Diagnosezentrum) */
+.tool-card.wide { grid-column: 1 / -1; }
+.tool-card.wide .features { grid-template-columns: repeat(2, 1fr); gap: 8px 28px; }
+.howto-title { margin-top: 4px; color: var(--text); font-weight: 700; font-size: 0.95rem; }
+.howto { margin: 10px 0 0; padding-left: 22px; display: grid; gap: 8px; color: #cfcfcf; font-size: 0.9rem; }
+.howto li::marker { color: var(--brand); font-weight: 700; }
+.howto b { color: var(--text); }
+.howto code.inline {
+  font-family: var(--font-mono); background: #141414; border: 1px solid var(--border);
+  padding: 2px 6px; border-radius: 5px; font-size: 0.85em; color: var(--text);
+}
 
 /* ---------- Install / binaries ---------- */
 .install { background: var(--surface); }
@@ -235,6 +248,7 @@ section { padding: 72px 0; border-top: 1px solid var(--border); }
   .hero { padding: 64px 0 52px; }
   .hero-stats { gap: 24px; }
   section { padding: 56px 0; }
-  .tools-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: minmax(0, 1fr); }
+  .tool-card.wide .features { grid-template-columns: 1fr; }
   .site-footer .wrap { flex-direction: column; align-items: flex-start; }
 }
