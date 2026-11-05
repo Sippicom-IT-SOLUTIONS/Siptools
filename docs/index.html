@@ -262,32 +262,39 @@
 
       <!-- Diagnosezentrum -->
       <article class="tool-card wide" id="diagnosezentrum">
-        <div class="top">
-          <div class="ico"><img src="assets/icons/turnkey.ico" alt="" /></div>
-          <div>
-            <h3>Diagnosezentrum <span class="tag dl">ZIP download</span></h3>
-            <div class="tagline">Workstation Diagnostics &amp; Repair Center · v1.9.2</div>
+        <div class="wide-grid">
+          <div class="wg-intro">
+            <div class="top">
+              <div class="ico"><img src="assets/icons/turnkey.ico" alt="" /></div>
+              <div>
+                <h3>Diagnosezentrum <span class="tag dl">ZIP</span></h3>
+                <div class="tagline">Diagnostics &amp; Repair Center · v1.9.2</div>
+              </div>
+            </div>
+            <p class="desc">Graphical support-desk tool: pick checks as tiles, run them at once and get a clear report for the ticket or the customer. PowerShell with a Windows interface (German), no installation.</p>
+            <div class="wg-actions">
+              <a class="btn btn-primary" href="downloads/Sippicom_Diagnosezentrum.zip" download>⬇ Download ZIP</a>
+              <a class="btn btn-ghost" href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/docs/downloads/Sippicom_Diagnosezentrum.zip">GitHub</a>
+            </div>
           </div>
-        </div>
-        <p class="desc">A graphical diagnostics and repair center for the support desk: choose checks as tiles, run them in one go and get a clear report for the ticket or the customer. Runs as a PowerShell script with a Windows interface (German) — no installation needed.</p>
-        <ul class="features">
-          <li>Tile grid with 8 categories, search and one-click profiles (Outlook problem, slow internet, slow PC, sign-in, printer)</li>
-          <li>Checks for system, hardware, updates, security, network, Wi-Fi, VPN, proxy, Microsoft 365, Outlook/Teams, printers and certificates</li>
-          <li>Repair tools that always ask first: SFC, DISM, update reset, DNS / spooler / DHCP, OneAuth, OST rebuild</li>
-          <li>Backups of Wi-Fi profiles, browser favorites, OneAuth and Outlook data</li>
-          <li>Reports as TXT and HTML with severity levels and a comparison with the last run</li>
-          <li>Plain-language customer report, optional network capture (pktmon), light and dark theme</li>
-        </ul>
-        <div class="howto-title">Quick start</div>
-        <ol class="howto">
-          <li><b>Download</b> the ZIP below. Right-click the file → <i>Properties</i> → tick <i>Unblock</i> (if shown), then extract <b>all files</b> into one folder. The <code class="inline">assets</code> folder must stay next to the script.</li>
-          <li><b>Start</b> <code class="inline">Sippicom_Diagnosezentrum.bat</code> (Windows 10/11, PowerShell 5.1). For repairs, right-click → <i>Run as administrator</i>.</li>
-          <li><b>Confirm</b> the privacy notice, optionally enter customer / ticket, pick a profile or tiles and click <i>Diagnose starten</i>.</li>
-          <li><b>Read the report</b> on the <i>Protokoll</i> tab. TXT and HTML files are saved to <code class="inline">C:\SippicomInstall\diagnose</code>.</li>
-        </ol>
-        <div class="hero-actions" style="margin-top:22px;">
-          <a class="btn btn-primary" href="downloads/Sippicom_Diagnosezentrum.zip" download>⬇ Download ZIP</a>
-          <a class="btn btn-ghost" href="https://github.com/Sippicom-IT-SOLUTIONS/Siptools/raw/main/docs/downloads/Sippicom_Diagnosezentrum.zip">Direct link (GitHub)</a>
+          <div class="wg-col">
+            <div class="howto-title">Highlights</div>
+            <ul class="features">
+              <li>8 categories, search and one-click profiles</li>
+              <li>Checks for system, network, Microsoft 365, Outlook, printers</li>
+              <li>Repairs that always ask first (SFC, DISM, DNS, spooler, OneAuth)</li>
+              <li>TXT/HTML report with comparison to the last run</li>
+            </ul>
+          </div>
+          <div class="wg-col">
+            <div class="howto-title">Quick start</div>
+            <ol class="howto">
+              <li><b>Download</b>, unblock the ZIP (<i>Properties</i>) and extract <b>all files</b> into one folder.</li>
+              <li><b>Start</b> <code class="inline">Sippicom_Diagnosezentrum.bat</code>; for repairs <i>Run as administrator</i>.</li>
+              <li><b>Pick</b> a profile or tiles, click <i>Diagnose starten</i>.</li>
+              <li><b>Report</b> lands in <code class="inline">C:\SippicomInstall\diagnose</code>.</li>
+            </ol>
+          </div>
         </div>
       </article>
 
